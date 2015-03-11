@@ -10,5 +10,17 @@
     "code-for-america"
   ],
   "author": "Juan Orozco",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.2.3",
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.4",
+    "require-dir": "^0.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.2",
+    "canjs": "^2.2.0-alpha.9",
+    "documentjs": "^0.3.0-pre.1",
+    "steal-tools": "^0.7.0"
+  }
 }
