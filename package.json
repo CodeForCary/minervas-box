@@ -12,6 +12,7 @@
   "author": "Juan Orozco",
   "license": "ISC",
   "devDependencies": {
+    "bower": "^1.3.12",
     "browser-sync": "^2.2.3",
     "gulp": "^3.8.11",
     "gulp-util": "^3.0.4",
@@ -21,6 +22,7 @@
     "bootstrap": "^3.3.2",
     "canjs": "^2.2.0-alpha.9",
     "documentjs": "^0.3.0-pre.1",
+    "steal": "^0.7.0",
     "steal-tools": "^0.7.0"
   }
 }
