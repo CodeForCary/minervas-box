@@ -1,13 +1,20 @@
 var opts = {
-    build: './build'
+    build: './build',
+    src: './'
 };
 
 module.exports = {
     build: {
-        src: './',
+        src: opts.src,
         build: opts.build
     },
     server: {
-        build: opts.build
+        prod: {
+            build: opts.build
+        },
+        dev: {
+            build: opts.src
+        }
+        
     }
 }
