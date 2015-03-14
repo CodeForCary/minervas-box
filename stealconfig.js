@@ -7,8 +7,9 @@ System.config({
         'bootstrap/*'   : '../node_modules/bootstrap/js/*.js',
         //'qunit'         : '../bower_components/qunit/qunit/qunit.js',
         //'funcunit'      : '../bower_components/funcunit/dist/funcunit.js',
-        'components'    : './components/*.js',
-        'models'        : './models/*.js'
+        'components/*'  : '../src/components/*.js',
+        'models/*'      : '../src/models/*.js',
+        'pages/*'       : '../src/pages/*.js'
     },
     meta: {
         jquery: {
