@@ -1,0 +1,3 @@
+<div class="image artwork">
+    <img src="{{path}}">
+</div>
