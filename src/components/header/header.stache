@@ -1,9 +1,16 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#!">
+      <a class="navbar-brand" href="{{getPageUrl 'home'}}">
         Minerva's Box
       </a>
+    </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="{{getPageUrl 'artwork'}}">Artwork</a></li>
+        </ul>
     </div>
   </div>
 </nav>
