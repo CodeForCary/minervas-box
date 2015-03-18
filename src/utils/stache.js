@@ -1,6 +1,6 @@
 require('jquery');
-require('canjs');
-require('canjs/stache');
+require('can');
+require('can/view/stache/stache');
 
 var escMap = {
   '\n': '\\n',
@@ -22,7 +22,7 @@ var esc = function (string) {
 
 
 exports.translate = function(load){
-    return 'define([\'canjs/stache\'],function(stache){' +
+    return 'define([\'can/view/stache/stache\'],function(stache){' +
       'return can.stache(\'' + esc(load.source) + '\')' +
       '})';
 };

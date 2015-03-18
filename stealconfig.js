@@ -1,8 +1,15 @@
 System.config({
+    map: {
+        "can/can"               : "can",
+        "can/map/define"        : "can/map/define/define",
+        "can/route/pushstate"   : "can/route/pushstate/pushstate",
+        "can/util/fixture"      : "can/util/fixture/fixture",
+        "jquery/jquery"         : "jquery"
+    },
     paths: {
         'jquery'        : '../node_modules/jquery/dist/jquery.min.js',
-        'canjs'         : '../bower_components/canjs/can.jquery.js',
-        'canjs/*'       : '../bower_components/canjs/can.*.js',
+        'can'           : '../bower_components/canjs/can.js',
+        'can/*'         : '../bower_components/canjs/*.js',
         'bootstrap'     : '../node_modules/bootstrap/dist/js/bootstrap.js',
         'bootstrap/*'   : '../node_modules/bootstrap/js/*.js',
         //'qunit'         : '../bower_components/qunit/qunit/qunit.js',
