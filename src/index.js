@@ -4,9 +4,22 @@ import 'can/route/pushstate';
 import 'can/view/stache/stache';
 import template from './index.stache!';
 import './index.less!'
+import AppModel from 'models/app-model/app-model';
+
+import 'components/router/router';
+import 'components/header/header';
+
+import 'pages/home/home';
+import 'pages/artwork/artwork';
+
+var appModel = new AppModel({});
+
+can.route.bind('change', function(ev, attr, how, newRoute, oldRoute) {
+    appModel.attr('currentRoute', newRoute);
+});
 
 can.Component.extend({
-    tag: 'main-app',
+    tag: 'minerva-app',
     template: template
 });
 
