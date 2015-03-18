@@ -1,6 +1,7 @@
 import $ from 'jquery';
-import can from 'canjs';
-import 'canjs/stache';
+import can from 'can';
+import 'can/route/pushstate';
+import 'can/view/stache/stache';
 import template from './index.stache!';
 import './index.less!'
 
@@ -9,4 +10,6 @@ can.Component.extend({
     template: template
 });
 
-$('#app').html(can.stache('<main-app></main-app>')({}));
+$('#app').html(can.stache('<minerva-app></minerva-app>')({state:appModel}));
+
+can.route.ready();
