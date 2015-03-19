@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>Near Me</h2>
+    
+    <p>Finding artwork near you...</p>
+    
+</div>
+
+<ma-sidebar place="right">
+    <h3>Cities near you...</h3>
+</ma-sidebar>

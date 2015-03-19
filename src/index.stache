@@ -4,8 +4,12 @@
     <mp-home></mp-home>
 </ma-router>
 
-<ma-router route-key="page" route-target="artwork">
-    <mp-artwork></mp-artwork>
+<ma-router route-key="page" route-target="cities">
+    <mp-cities></mp-cities>
+</ma-router>
+
+<ma-router route-key="page" route-target="artwork-detail">
+    <mp-artwork-detail></mp-artwork-detail>
 </ma-router>
 
 <ma-footer></ma-footer>
