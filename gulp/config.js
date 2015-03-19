@@ -1,5 +1,5 @@
 var opts = {
-    build: './build',
+    build: './dist',
     src: './'
 };
 
