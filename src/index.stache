@@ -1,4 +1,15 @@
-<aw-header></aw-header>
-<h1>Artwork</h1>
-<aw-route></aw-route>
-<aw-footer></aw-footer>
+<ma-header></ma-header>
+
+<ma-router route-key="page" route-path="" route-target="home">
+    <mp-home></mp-home>
+</ma-router>
+
+<ma-router route-key="page" route-target="cities">
+    <mp-cities></mp-cities>
+</ma-router>
+
+<ma-router route-key="page" route-target="artwork-detail">
+    <mp-artwork-detail></mp-artwork-detail>
+</ma-router>
+
+<ma-footer></ma-footer>

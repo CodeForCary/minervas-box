@@ -1,0 +1,12 @@
+<div class="image artwork">
+    <h3>{{item.title}}</h3>
+    <img src="{{item.url}}">
+    <div class="metadata">
+        {{#item.description}}
+        <dl>
+            <dt>Description</dt>
+            <dd>{{item.description}}</dd>
+        </dl>
+        {{/item.description}}
+    </div>
+</div>

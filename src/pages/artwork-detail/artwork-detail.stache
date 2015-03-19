@@ -1,0 +1,8 @@
+<h2>Artwork</h2>
+
+{{#artList}}
+    <ma-art-photo item="{.}"></ma-art-photo>
+{{/artList}}
+{{^if artList.length}}
+    <p>Loading...</p>
+{{/if}}
