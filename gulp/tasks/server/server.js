@@ -12,11 +12,18 @@ gulp.task('server', function() {
     
 });
 
-gulp.task('server:dev', function() {
+gulp.task('server:dev', ['build'], function() {
     browserSync({
         server: {
             baseDir: config.dev.build
         }
     });
-    
+});
+
+gulp.task('server:prod', ['build'], function() {
+    browserSync({
+        server: {
+            baseDir: config.prod.build
+        }
+    });
 });

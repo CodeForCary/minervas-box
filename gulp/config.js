@@ -1,12 +1,10 @@
 var opts = {
-    build: './dist',
-    src: './'
+    build: 'dist',
+    src: './src'
 };
 
 module.exports = {
     build: {
-        src: opts.src,
-        build: opts.build
     },
     server: {
         prod: {
@@ -16,5 +14,8 @@ module.exports = {
             build: opts.src
         }
         
+    },
+    jshint: {
+        src: opts.src + '/**/*.js'
     }
 }
