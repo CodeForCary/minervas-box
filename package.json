@@ -2,7 +2,7 @@
   "name": "artProject",
   "version": "0.0.0",
   "description": "Maintains and displays city curated artwork.",
-  "main": "index.js",
+  "main": "dist/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,18 +12,60 @@
   "author": "Juan Orozco",
   "license": "ISC",
   "devDependencies": {
+    "babel": "^5.1.10",
     "bower": "^1.3.12",
     "browser-sync": "^2.2.3",
+    "del": "^1.1.1",
     "gulp": "^3.8.11",
-    "gulp-babel": "^4.0.0",
+    "gulp-jshint": "^1.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.3",
     "gulp-util": "^3.0.4",
-    "require-dir": "^0.1.0"
+    "jshint-stylish": "^1.0.1",
+    "require-dir": "^0.1.0",
+    "steal-tools": "^0.8.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.2",
-    "canjs": "^2.2.0-alpha.9",
-    "documentjs": "^0.3.0-pre.1",
-    "steal": "^0.7.0",
-    "steal-tools": "^0.7.0"
+    "can": "^2.2.4",
+    "documentjs": "^0.3.0-pre.1"
+  },
+  "system": {
+    "main": "src/index",
+    "map": {
+      "can/can": "can",
+      "can/map/define": "can/map/define/",
+      "can/route/pushstate": "can/route/pushstate/",
+      "can/util/fixture": "can/util/fixture/",
+      "jquery/jquery": "jquery",
+      "can/util/util": "can/util/jquery/jquery"
+    },
+    "paths": {
+      "jquery": "bower_components/jquery/dist/jquery.js",
+      "can": "node_modules/can/can.js",
+      "can/*": "node_modules/can/*.js",
+      "bootstrap": "node_modules/bootstrap/dist/js/bootstrap.js",
+      "bootstrap/*": "node_modules/bootstrap/js/*.js",
+      "components/*": "src/components/*.js",
+      "models/*": "src/models/*.js",
+      "pages/*": "src/pages/*.js"
+    },
+    "npmIgnore": [
+      "documentjs"
+    ],
+    "meta": {
+      "jquery": {
+        "exports": "jquery",
+        "format": "amd"
+      },
+      "canjs": {
+        "exports": "can",
+        "format": "amd"
+      }
+    },
+    "configDependencies": [
+      "bower.json!bower"
+    ],
+    "transpiler": "babel"
   }
 }
