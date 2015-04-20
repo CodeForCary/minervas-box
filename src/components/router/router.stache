@@ -1,3 +1,0 @@
-{{#if showRoute}}
-<content></content>
-{{/if}}
