@@ -8,8 +8,8 @@
     <mp-cities></mp-cities>
 </ma-router>
 
-<ma-router route-key="page" route-target="artwork-detail">
-    <mp-artwork-detail></mp-artwork-detail>
+<ma-router route-key="page" route-target="near-me">
+    <mp-near-me></mp-near-me>
 </ma-router>
 
 <ma-footer></ma-footer>

@@ -8,7 +8,7 @@ export default can.Map.extend({
                 var routeKey = this.attr('routeKey'),
                     route = typeof can.route.attr(routeKey) === 'undefined'? '': can.route.attr(routeKey);
                     
-                if (route == this.attr('routePath')) {
+                if (route == this.attr('routeTarget')) {
                     return true;
                 }
                 return false;
