@@ -5686,8 +5686,8 @@ if (typeof System !== "undefined") {
 /*[add-define]*/
 window.define = System.amdDefine;
 /*[system-bundles-config]*/
-System.paths["bundles/*.css"] ="../../../../../../../..//*css";
-System.paths["bundles/*"] = "../../../../../../../..//*.js";
+System.paths["bundles/*.css"] ="../../../../../../../../minervas-box/*css";
+System.paths["bundles/*"] = "../../../../../../../../minervas-box/*.js";
 System.bundles = {"bundles/src/index.css!":["src/index.less!$less"]};
 /*npm-utils*/
 define('npm-utils', function (require, exports, module) {
@@ -6202,6 +6202,13 @@ define('package.json!npm', [
             'browser': {}
         },
         {
+            'name': 'babel',
+            'version': '5.1.11',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/package.json',
+            'globalBrowser': {},
+            'browser': {}
+        },
+        {
             'name': 'can',
             'version': '2.2.4',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/can/package.json',
@@ -6322,13 +6329,6 @@ define('package.json!npm', [
             }
         },
         {
-            'name': 'babel',
-            'version': '5.1.11',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/package.json',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
             'name': 'browser-sync',
             'version': '2.6.4',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/package.json',
@@ -6373,16 +6373,16 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'jshint-stylish',
-            'version': '1.0.1',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/jshint-stylish/package.json',
+            'name': 'gulp-util',
+            'version': '3.0.4',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/gulp-util/package.json',
             'globalBrowser': {},
             'browser': {}
         },
         {
-            'name': 'gulp-util',
-            'version': '3.0.4',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/gulp-util/package.json',
+            'name': 'jshint-stylish',
+            'version': '1.0.1',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/jshint-stylish/package.json',
             'globalBrowser': {},
             'browser': {}
         },
@@ -6394,20 +6394,20 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'jquery',
-            'version': '2.1.3',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/jquery/package.json',
-            'main': 'dist/jquery.js',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
             'name': 'babel-core',
             'version': '5.1.11',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/package.json',
             'main': 'lib/babel/api/node.js',
             'globalBrowser': {},
             'browser': { 'babel-core#lib/babel/api/register/node.js': 'babel-core#lib/babel/api/register/browser.js' }
+        },
+        {
+            'name': 'jquery',
+            'version': '2.1.3',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/jquery/package.json',
+            'main': 'dist/jquery.js',
+            'globalBrowser': {},
+            'browser': {}
         },
         {
             'name': 'chokidar',
@@ -6548,18 +6548,18 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'immutable',
-            'version': '3.7.2',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/immutable/package.json',
-            'main': 'dist/immutable.js',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
             'name': 'localtunnel',
             'version': '1.5.0',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/localtunnel/package.json',
             'main': './client.js',
+            'globalBrowser': {},
+            'browser': {}
+        },
+        {
+            'name': 'immutable',
+            'version': '3.7.2',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/immutable/package.json',
+            'main': 'dist/immutable.js',
             'globalBrowser': {},
             'browser': {}
         },
@@ -6578,18 +6578,18 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'portscanner',
-            'version': '1.0.0',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/portscanner/package.json',
-            'main': './lib/portscanner.js',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
             'name': 'query-string',
             'version': '1.0.0',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/query-string/package.json',
             'main': 'query-string.js',
+            'globalBrowser': {},
+            'browser': {}
+        },
+        {
+            'name': 'portscanner',
+            'version': '1.0.0',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/portscanner/package.json',
+            'main': './lib/portscanner.js',
             'globalBrowser': {},
             'browser': {}
         },
@@ -6948,20 +6948,20 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'debug',
-            'version': '2.1.3',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/debug/package.json',
-            'main': './node.js',
-            'globalBrowser': {},
-            'browser': './browser.js'
-        },
-        {
             'name': 'core-js',
             'version': '0.8.4',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/core-js/package.json',
             'main': 'index.js',
             'globalBrowser': {},
             'browser': {}
+        },
+        {
+            'name': 'debug',
+            'version': '2.1.3',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/debug/package.json',
+            'main': './node.js',
+            'globalBrowser': {},
+            'browser': './browser.js'
         },
         {
             'name': 'detect-indent',
@@ -7031,18 +7031,18 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'regenerator',
-            'version': '0.8.22',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regenerator/package.json',
-            'main': 'main.js',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
             'name': 'regexpu',
             'version': '1.1.2',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regexpu/package.json',
             'main': 'regexpu.js',
+            'globalBrowser': {},
+            'browser': {}
+        },
+        {
+            'name': 'regenerator',
+            'version': '0.8.22',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regenerator/package.json',
+            'main': 'main.js',
             'globalBrowser': {},
             'browser': {}
         },
@@ -7076,17 +7076,17 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'to-fast-properties',
-            'version': '1.0.1',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/to-fast-properties/package.json',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
             'name': 'strip-json-comments',
             'version': '1.0.2',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/strip-json-comments/package.json',
             'main': 'strip-json-comments',
+            'globalBrowser': {},
+            'browser': {}
+        },
+        {
+            'name': 'to-fast-properties',
+            'version': '1.0.1',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/to-fast-properties/package.json',
             'globalBrowser': {},
             'browser': {}
         },
@@ -7340,16 +7340,16 @@ define('package.json!npm', [
             'browser': './debug.js'
         },
         {
-            'name': 'camelcase-keys',
-            'version': '1.0.0',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/meow/node_modules/camelcase-keys/package.json',
+            'name': 'indent-string',
+            'version': '1.2.1',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/meow/node_modules/indent-string/package.json',
             'globalBrowser': {},
             'browser': {}
         },
         {
-            'name': 'indent-string',
-            'version': '1.2.1',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/meow/node_modules/indent-string/package.json',
+            'name': 'camelcase-keys',
+            'version': '1.0.0',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/meow/node_modules/camelcase-keys/package.json',
             'globalBrowser': {},
             'browser': {}
         },
@@ -7450,16 +7450,16 @@ define('package.json!npm', [
             'browser': './browser.js'
         },
         {
-            'name': 'set-immediate-shim',
-            'version': '1.0.1',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/del/node_modules/each-async/node_modules/set-immediate-shim/package.json',
+            'name': 'onetime',
+            'version': '1.0.0',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/del/node_modules/each-async/node_modules/onetime/package.json',
             'globalBrowser': {},
             'browser': {}
         },
         {
-            'name': 'onetime',
-            'version': '1.0.0',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/del/node_modules/each-async/node_modules/onetime/package.json',
+            'name': 'set-immediate-shim',
+            'version': '1.0.1',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/del/node_modules/each-async/node_modules/set-immediate-shim/package.json',
             'globalBrowser': {},
             'browser': {}
         },
@@ -7471,18 +7471,18 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'async',
-            'version': '0.9.0',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/del/node_modules/globby/node_modules/async/package.json',
-            'main': './lib/async',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
             'name': 'glob',
             'version': '4.5.3',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/del/node_modules/globby/node_modules/glob/package.json',
             'main': 'glob.js',
+            'globalBrowser': {},
+            'browser': {}
+        },
+        {
+            'name': 'async',
+            'version': '0.9.0',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/del/node_modules/globby/node_modules/async/package.json',
+            'main': './lib/async',
             'globalBrowser': {},
             'browser': {}
         },
@@ -7553,17 +7553,17 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'resolve',
-            'version': '1.1.6',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/gulp/node_modules/liftoff/node_modules/resolve/package.json',
+            'name': 'end-of-stream',
+            'version': '0.1.5',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/gulp/node_modules/orchestrator/node_modules/end-of-stream/package.json',
             'main': 'index.js',
             'globalBrowser': {},
             'browser': {}
         },
         {
-            'name': 'end-of-stream',
-            'version': '0.1.5',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/gulp/node_modules/orchestrator/node_modules/end-of-stream/package.json',
+            'name': 'resolve',
+            'version': '1.1.6',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/gulp/node_modules/liftoff/node_modules/resolve/package.json',
             'main': 'index.js',
             'globalBrowser': {},
             'browser': {}
@@ -7727,16 +7727,16 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'strip-ansi',
-            'version': '2.0.1',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/gulp-util/node_modules/chalk/node_modules/strip-ansi/package.json',
+            'name': 'has-ansi',
+            'version': '1.0.3',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/gulp-util/node_modules/chalk/node_modules/has-ansi/package.json',
             'globalBrowser': {},
             'browser': {}
         },
         {
-            'name': 'has-ansi',
-            'version': '1.0.3',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/gulp-util/node_modules/chalk/node_modules/has-ansi/package.json',
+            'name': 'strip-ansi',
+            'version': '2.0.1',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/gulp-util/node_modules/chalk/node_modules/strip-ansi/package.json',
             'globalBrowser': {},
             'browser': {}
         },
@@ -8001,17 +8001,17 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'filename-regex',
-            'version': '2.0.0',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/anymatch/node_modules/micromatch/node_modules/filename-regex/package.json',
+            'name': 'kind-of',
+            'version': '1.1.0',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/anymatch/node_modules/micromatch/node_modules/kind-of/package.json',
             'main': 'index.js',
             'globalBrowser': {},
             'browser': {}
         },
         {
-            'name': 'kind-of',
-            'version': '1.1.0',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/anymatch/node_modules/micromatch/node_modules/kind-of/package.json',
+            'name': 'filename-regex',
+            'version': '2.0.0',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/anymatch/node_modules/micromatch/node_modules/filename-regex/package.json',
             'main': 'index.js',
             'globalBrowser': {},
             'browser': {}
@@ -8080,17 +8080,17 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'eventemitter3',
-            'version': '0.1.6',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/foxy/node_modules/http-proxy/node_modules/eventemitter3/package.json',
-            'main': 'index.js',
+            'name': 'object-path',
+            'version': '0.9.2',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/eazy-logger/node_modules/tfunk/node_modules/object-path/package.json',
             'globalBrowser': {},
             'browser': {}
         },
         {
-            'name': 'object-path',
-            'version': '0.9.2',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/eazy-logger/node_modules/tfunk/node_modules/object-path/package.json',
+            'name': 'eventemitter3',
+            'version': '0.1.6',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/foxy/node_modules/http-proxy/node_modules/eventemitter3/package.json',
+            'main': 'index.js',
             'globalBrowser': {},
             'browser': {}
         },
@@ -8582,18 +8582,18 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'glob',
-            'version': '4.2.2',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/commoner/node_modules/glob/package.json',
-            'main': 'glob.js',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
             'name': 'commander',
             'version': '2.5.1',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/commoner/node_modules/commander/package.json',
             'main': 'index',
+            'globalBrowser': {},
+            'browser': {}
+        },
+        {
+            'name': 'glob',
+            'version': '4.2.2',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/commoner/node_modules/glob/package.json',
+            'main': 'glob.js',
             'globalBrowser': {},
             'browser': {}
         },
@@ -8641,14 +8641,6 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'esprima-fb',
-            'version': '8001.1001.0-dev-harmony-fb',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/esprima-fb/package.json',
-            'main': 'esprima.js',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
             'name': 'breakable',
             'version': '1.0.0',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/breakable/package.json',
@@ -8657,18 +8649,10 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'stringmap',
-            'version': '0.2.2',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/stringmap/package.json',
-            'main': 'stringmap.js',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
-            'name': 'tryor',
-            'version': '0.1.2',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/tryor/package.json',
-            'main': 'tryor.js',
+            'name': 'esprima-fb',
+            'version': '8001.1001.0-dev-harmony-fb',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/esprima-fb/package.json',
+            'main': 'esprima.js',
             'globalBrowser': {},
             'browser': {}
         },
@@ -8681,6 +8665,22 @@ define('package.json!npm', [
             'browser': {}
         },
         {
+            'name': 'simple-is',
+            'version': '0.2.0',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/simple-is/package.json',
+            'main': 'simple-is.js',
+            'globalBrowser': {},
+            'browser': {}
+        },
+        {
+            'name': 'stringmap',
+            'version': '0.2.2',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/stringmap/package.json',
+            'main': 'stringmap.js',
+            'globalBrowser': {},
+            'browser': {}
+        },
+        {
             'name': 'stringset',
             'version': '0.2.1',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/stringset/package.json',
@@ -8689,10 +8689,10 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'simple-is',
-            'version': '0.2.0',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/simple-is/package.json',
-            'main': 'simple-is.js',
+            'name': 'tryor',
+            'version': '0.1.2',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/babel/node_modules/babel-core/node_modules/regenerator/node_modules/defs/node_modules/tryor/package.json',
+            'main': 'tryor.js',
             'globalBrowser': {},
             'browser': {}
         },
@@ -8729,6 +8729,14 @@ define('package.json!npm', [
             'browser': {}
         },
         {
+            'name': 'array-slice',
+            'version': '0.2.3',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/anymatch/node_modules/micromatch/node_modules/arr-diff/node_modules/array-slice/package.json',
+            'main': 'index.js',
+            'globalBrowser': {},
+            'browser': {}
+        },
+        {
             'name': 'expand-range',
             'version': '1.8.1',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/package.json',
@@ -8740,14 +8748,6 @@ define('package.json!npm', [
             'name': 'preserve',
             'version': '0.2.0',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/preserve/package.json',
-            'main': 'index.js',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
-            'name': 'array-slice',
-            'version': '0.2.3',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/anymatch/node_modules/micromatch/node_modules/arr-diff/node_modules/array-slice/package.json',
             'main': 'index.js',
             'globalBrowser': {},
             'browser': {}
@@ -8849,6 +8849,14 @@ define('package.json!npm', [
             'browser': {}
         },
         {
+            'name': 'abbrev',
+            'version': '1.0.5',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/browser-sync-ui/node_modules/weinre/node_modules/nopt/node_modules/abbrev/package.json',
+            'main': 'abbrev.js',
+            'globalBrowser': {},
+            'browser': {}
+        },
+        {
             'name': 'ee-first',
             'version': '1.1.0',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/connect/node_modules/finalhandler/node_modules/on-finished/node_modules/ee-first/package.json',
@@ -8860,14 +8868,6 @@ define('package.json!npm', [
             'version': '0.0.3',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/localtunnel/node_modules/request/node_modules/form-data/node_modules/combined-stream/package.json',
             'main': './lib/combined_stream',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
-            'name': 'abbrev',
-            'version': '1.0.5',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/browser-sync-ui/node_modules/weinre/node_modules/nopt/node_modules/abbrev/package.json',
-            'main': 'abbrev.js',
             'globalBrowser': {},
             'browser': {}
         },
@@ -9039,18 +9039,18 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'minimatch',
-            'version': '0.3.0',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/gulp-jshint/node_modules/jshint/node_modules/cli/node_modules/glob/node_modules/minimatch/package.json',
-            'main': 'minimatch.js',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
             'name': 'globule',
             'version': '0.1.0',
             'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-watcher/node_modules/gaze/node_modules/globule/package.json',
             'main': 'lib/globule',
+            'globalBrowser': {},
+            'browser': {}
+        },
+        {
+            'name': 'minimatch',
+            'version': '0.3.0',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/gulp-jshint/node_modules/jshint/node_modules/cli/node_modules/glob/node_modules/minimatch/package.json',
+            'main': 'minimatch.js',
             'globalBrowser': {},
             'browser': {}
         },
@@ -9103,17 +9103,17 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'for-in',
-            'version': '0.1.4',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit/node_modules/for-own/node_modules/for-in/package.json',
+            'name': 'fill-range',
+            'version': '2.2.2',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/package.json',
             'main': 'index.js',
             'globalBrowser': {},
             'browser': {}
         },
         {
-            'name': 'fill-range',
-            'version': '2.2.2',
-            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/anymatch/node_modules/micromatch/node_modules/braces/node_modules/expand-range/node_modules/fill-range/package.json',
+            'name': 'for-in',
+            'version': '0.1.4',
+            'fileUrl': 'file:/Users/jorozco/Dropbox/codeforcary/apps/artProject/work/node_modules/browser-sync/node_modules/anymatch/node_modules/micromatch/node_modules/object.omit/node_modules/for-own/node_modules/for-in/package.json',
             'main': 'index.js',
             'globalBrowser': {},
             'browser': {}
@@ -18962,6 +18962,10 @@ define('pages/cities/cities', [
         }
     });
 });
+/*can@2.2.4#util/domless/domless*/
+System.set('can@2.2.4#util/domless/domless', System.newModule({}));
+/*can@2.2.4#util/array/makeArray*/
+System.set('can@2.2.4#util/array/makeArray', System.newModule({}));
 /*pages/near-me/near-me.stache!can@2.2.4#view/stache/system*/
 define('pages/near-me/near-me.stache!can@2.2.4#view/stache/system', ['can/view/stache/stache'], function (stache) {
     return stache([
@@ -19125,10 +19129,6 @@ define('pages/near-me/near-me.stache!can@2.2.4#view/stache/system', ['can/view/s
         }
     ]);
 });
-/*can@2.2.4#util/domless/domless*/
-System.set('can@2.2.4#util/domless/domless', System.newModule({}));
-/*can@2.2.4#util/array/makeArray*/
-System.set('can@2.2.4#util/array/makeArray', System.newModule({}));
 /*pages/near-me/near-me.viewmodel*/
 define('pages/near-me/near-me.viewmodel', [
     'exports',
