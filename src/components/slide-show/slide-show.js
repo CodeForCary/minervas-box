@@ -3,9 +3,9 @@ import 'can/view/stache/stache';
 import template from './slide-show.stache!';
 import viewmodel from './viewmodel';
 
-import from 'bootstrap/carousel'
+import 'bootstrap/carousel';
 
-can.Component.extend({
+export default can.Component.extend({
     tag: 'ma-slide-show',
     template: template,
     scope: viewmodel,
