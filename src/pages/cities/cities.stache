@@ -1,10 +1,15 @@
 <div class="container">
     <h2>Cities</h2>
     
-    <p>Near you...</p>
+    <ul>
+        {{#cities}}
+        <li>{{cityName}}</li>
+        {{/cities}}
+    </ul>
     
 </div>
-
+{{#showSidebar}}
 <ma-sidebar place="right">
     <h3>All cities...</h3>
 </ma-sidebar>
+{{/showSidebar}}
