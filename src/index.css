@@ -6553,4 +6553,24 @@ button.close {
   width: 500px;
 }
 
+/*pages/cities/cities.less!$less*/
+mp-cities .city {
+  padding: 0 1rem;
+  position: relative;
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+}
+mp-cities .city:last-child {
+  border-bottom: none;
+}
+mp-cities .city .city-logo {
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+mp-cities .city .city-name,
+mp-cities .city .city-short-desc {
+  margin-left: 70px;
+}
+
 /*# sourceMappingURL=index.css.map */
