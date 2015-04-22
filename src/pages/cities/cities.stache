@@ -1,10 +1,17 @@
-<div class="container">
-    <h2>Cities</h2>
+<div class="cities">
+    <h2>Cities Near Me...</h2>
     
-    <p>Near you...</p>
+    {{#cities}}
+    <a class="btn city" href="#!cities/{{cityCode}}">
+        <h3 class="city-name">{{cityName}}</h3>
+        <img src="{{logoSrc}}" class="city-logo">
+        <p class="city-short-desc">{{shortDescription}}</p>
+    </a>
+    {{/cities}}
     
 </div>
-
+{{#showSidebar}}
 <ma-sidebar place="right">
     <h3>All cities...</h3>
 </ma-sidebar>
+{{/showSidebar}}

@@ -2,9 +2,20 @@ import can from 'can';
 import 'can/view/stache/stache';
 import template from './cities.stache!';
 import viewmodel from './cities.viewmodel';
+import './cities.less!';
 
 can.Component.extend({
     tag: 'mp-cities',
     template: template,
-    scope: viewmodel
+    scope: viewmodel,
+    events: {
+        inserted: function () {
+            var vm = this.viewModel,
+                def = vm.City.findAll({});
+            
+            def.then(function (resp) {
+                vm.attr('cities', resp);
+            });
+        }
+    }
 });
