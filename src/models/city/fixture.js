@@ -2,9 +2,9 @@ import can from 'can';
 import 'can/util/fixture';
 
 var cityList = [
-    {id:1, cityName: 'Cary', url:'http://placekitten.com/g/300/200', description: 'Lorem ipsum'},
-    {id:2, cityName: 'Raleigh', url:'http://placekitten.com/g/200/300', description: 'Kitty cat'},
-    {id:3, cityName: 'Durham', url:'https://farm4.staticflickr.com/3729/10007371353_4f5708a325_z.jpg', description: 'SPACE'}
+    {id:1, cityCode: 'nc/cary', cityName: 'Cary', logoSrc:'http://placekitten.com/g/50/50', shortDescription: 'Cary is located southeast of Raleigh.'},
+    {id:2, cityCode: 'nc/raleigh', cityName: 'Raleigh', logoSrc:'http://placekitten.com/g/50/50', shortDescription: 'Raleigh is east of Durham.'},
+    {id:3, cityCode: 'nc/durham', cityName: 'Durham', logoSrc:'http://placekitten.com/g/50/50', shortDescription: 'Durham is north of Cary.'}
 ];
 
 can.fixture('GET /city.json', function() {

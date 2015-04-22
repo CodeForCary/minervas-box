@@ -28,7 +28,10 @@ gulp.task('build', ['clear_build'], function() {
     
     promise.then( function () {
         gulp.src('_dist/**/*.*')
-            .pipe(replace(/_dist/g,''))
+            //TODO clean this up so it can build for dev or prod
+            //uncomment next line to build for gh pages site.
+            //.pipe(replace(/_dist\//g,'minervas-box/'))
+            .pipe(replace(/_dist\//g,'/'))
             .pipe(gulp.dest('dist'));
     });
 });
