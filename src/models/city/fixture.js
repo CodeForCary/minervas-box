@@ -7,7 +7,14 @@ var cityList = [
     {id:3, cityCode: 'nc/durham', cityName: 'Durham', logoSrc:'http://placekitten.com/g/50/50', shortDescription: 'Durham is north of Cary.'}
 ];
 
-can.fixture('GET /city.json', function() {
+can.fixture('GET /city.json', function(params) {
+    if (params.city) {
+
+    }
+
+    if (params.coords) {
+      
+    }
     return cityList;
 });
 

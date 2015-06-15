@@ -48,7 +48,8 @@
       "bootstrap/*": "node_modules/bootstrap/js/*.js",
       "components/*": "src/components/*.js",
       "models/*": "src/models/*.js",
-      "pages/*": "src/pages/*.js"
+      "pages/*": "src/pages/*.js",
+      "utils/*": "src/utils/*.js"
     },
     "npmIgnore": [
       "documentjs"

@@ -4,10 +4,8 @@ import template from './cities.stache!';
 import viewmodel from './cities.viewmodel';
 import './cities.less!';
 
-import 'components/geolocation/geolocation';
-
 can.Component.extend({
-    tag: 'mp-cities',
+    tag: 'mp-city-detail',
     template: template,
     scope: viewmodel,
     events: {
