@@ -1,8 +1,8 @@
 import can from 'can';
 import 'can/view/stache/stache';
-import template from './cities.stache!';
-import viewmodel from './cities.viewmodel';
-import './cities.less!';
+import template from './city-detail.stache!';
+import viewmodel from './city-detail.viewmodel';
+import './city-detail.less!';
 
 can.Component.extend({
     tag: 'mp-city-detail',
@@ -11,10 +11,13 @@ can.Component.extend({
     events: {
         inserted: function () {
             var vm = this.viewModel,
-                def = vm.City.findAll({});
-
+                params = {
+                    city: can.route.attr('city'),
+                    state: can.route.attr('state')
+                },
+                def = vm.City.findOne(params);
             def.then(function (resp) {
-                vm.attr('cities', resp);
+                vm.attr('city', resp);
             });
         }
     }

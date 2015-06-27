@@ -2,7 +2,6 @@
   "name": "artProject",
   "version": "0.0.0",
   "description": "Maintains and displays city curated artwork.",
-  "main": "dist/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,49 +22,27 @@
     "gulp-util": "^3.0.4",
     "jshint-stylish": "^1.0.1",
     "require-dir": "^0.1.0",
-    "steal-tools": "^0.8.0"
-  },
-  "dependencies": {
-    "bootstrap": "^3.3.2",
-    "can": "^2.2.4",
     "documentjs": "^0.3.0-pre.1"
   },
+  "dependencies": {
+    "can": "^2.3.0-pre.1",
+    "bootstrap": "^3.3.5",
+    "jquery": "^2.1.4",
+    "steal-tools": "^0.11.0-pre.0",
+    "steal": "^0.10.5"
+  },
   "system": {
-    "main": "src/index",
-    "map": {
-      "can/can": "can",
-      "can/map/define": "can/map/define/",
-      "can/route/pushstate": "can/route/pushstate/",
-      "can/util/fixture": "can/util/fixture/",
-      "jquery/jquery": "jquery",
-      "can/util/util": "can/util/jquery/jquery"
-    },
+    "ignoreBrowser": true,
     "paths": {
-      "jquery": "bower_components/jquery/dist/jquery.js",
-      "can": "node_modules/can/can.js",
-      "can/*": "node_modules/can/*.js",
-      "bootstrap": "node_modules/bootstrap/dist/js/bootstrap.js",
-      "bootstrap/*": "node_modules/bootstrap/js/*.js",
-      "components/*": "src/components/*.js",
-      "models/*": "src/models/*.js",
-      "pages/*": "src/pages/*.js",
-      "utils/*": "src/utils/*.js"
+      "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js",
+      "bootstrap/*": "./node_modules/bootstrap/js/*.js",
+      "components/*": "./src/components/*.js",
+      "models/*": "./src/models/*.js",
+      "pages/*": "./src/pages/*.js",
+      "utils/*": "./src/utils/*.js"
     },
     "npmIgnore": [
-      "documentjs"
-    ],
-    "meta": {
-      "jquery": {
-        "exports": "jquery",
-        "format": "amd"
-      },
-      "canjs": {
-        "exports": "can",
-        "format": "amd"
-      }
-    },
-    "configDependencies": [
-      "bower.json!bower"
+      "devDependencies"
     ],
     "transpiler": "babel"
   }

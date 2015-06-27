@@ -1,5 +1,5 @@
 import can from 'can';
-import 'can/util/fixture';
+import 'can/util/fixture/fixture';
 
 var artList = [
     {id:1, title: 'Heyo', url:'http://placekitten.com/g/300/200', description: 'Lorem ipsum'},

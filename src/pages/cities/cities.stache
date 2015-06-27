@@ -2,7 +2,7 @@
     <h2>Cities Near Me...</h2>
     <bit-geolocation></bit-geolocation>
     {{#cities}}
-    <a class="btn city" href="#!cities/{{cityCode}}">
+    <a href="#" class="btn city" can-click="updateContext city=cityKey state=stateKey">
         <h3 class="city-name">{{cityName}}</h3>
         <img src="{{logoSrc}}" class="city-logo">
         <p class="city-short-desc">{{shortDescription}}</p>

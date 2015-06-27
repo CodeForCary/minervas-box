@@ -12,6 +12,7 @@ import 'components/header/header';
 
 import 'pages/home/home';
 import 'pages/cities/cities';
+import 'pages/city-detail/city-detail';
 import 'pages/near-me/near-me';
 
 var appModel = new AppModel({});

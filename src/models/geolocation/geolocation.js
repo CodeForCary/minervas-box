@@ -1,10 +1,10 @@
 import can from 'can';
-import 'can/map/define';
+import 'can/map/define/define';
 import Storage from 'utils/localStorage';
 
 var storage = Storage(),
   dpipApiKey = '0f5a6c8d64f29d3eda22820a9b52acdbcc315647',
-  ipLocUrl = 'http://api.db-ip.com/addrinfo?&api_key='+dpipApiKey+'&addrinfo=';
+  ipLocUrl = 'http://api.db-ip.com/addrinfo?&api_key='+dpipApiKey+'&addr=';
 
 export default can.Model.extend({
     findOne: function () {

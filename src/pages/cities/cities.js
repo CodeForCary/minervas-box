@@ -14,7 +14,6 @@ can.Component.extend({
         inserted: function () {
             var vm = this.viewModel,
                 def = vm.City.findAll({});
-
             def.then(function (resp) {
                 vm.attr('cities', resp);
             });

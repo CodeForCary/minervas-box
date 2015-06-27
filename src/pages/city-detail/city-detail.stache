@@ -1,0 +1,10 @@
+<h2>{{city.cityName}}</h2>
+
+<p>{{city.shortDescription}}</p>
+
+<h3>Artwork</h3>
+<div class="city-artwork">
+{{#artwork.items}}
+{{.}}
+{{/artwork.items}}
+</div>

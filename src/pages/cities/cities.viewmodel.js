@@ -1,5 +1,5 @@
 import can from 'can';
-import 'can/map/define';
+import 'can/map/define/define';
 import City from 'models/city/city';
 
 export default can.Map.extend({
@@ -8,5 +8,9 @@ export default can.Map.extend({
             value: []
         }
     },
-    City: City
+    City: City,
+    updateContext: function (hash) {
+      can.route.attr(hash);
+      return false;
+    }
 });

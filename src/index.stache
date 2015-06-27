@@ -8,6 +8,14 @@
     <mp-cities></mp-cities>
 </ma-router>
 
+<ma-router route-key="page" route-target=":stateKey/all">
+    <mp-cities></mp-cities>
+</ma-router>
+
+<ma-router route-key="page" route-target=":state/:city">
+    <mp-city-detail></mp-city-detail>
+</ma-router>
+
 <ma-router route-key="page" route-target="near-me">
     <mp-near-me></mp-near-me>
 </ma-router>
