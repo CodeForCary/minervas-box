@@ -5791,8 +5791,8 @@ if (typeof System !== "undefined") {
 /*[add-define]*/
 ((typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope) ? self : window).define = System.amdDefine;
 /*[system-bundles-config]*/
-System.paths["bundles/*.css"] ="../../../../../../..//*css";
-System.paths["bundles/*"] = "../../../../../../..//*.js";
+System.paths["bundles/*.css"] ="../../../../../../../minervas-box/*css";
+System.paths["bundles/*"] = "../../../../../../../minervas-box/*.js";
 System.bundles = {"bundles/src/index.css!":["src/index.less!$less","pages/cities/cities.less!$less","pages/city-detail/city-detail.less!$less"]};
 /*npm-utils*/
 define('npm-utils', function (require, exports, module) {
@@ -6390,18 +6390,18 @@ define('package.json!npm', [
             }
         },
         {
-            'name': 'jquery',
-            'version': '2.1.4',
-            'fileUrl': 'file:/Users/jorozco/projects/codeforcary/artProject/work/node_modules/jquery/package.json',
-            'main': 'dist/jquery.js',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
             'name': 'bootstrap',
             'version': '3.3.5',
             'fileUrl': 'file:/Users/jorozco/projects/codeforcary/artProject/work/node_modules/bootstrap/package.json',
             'main': './dist/js/npm',
+            'globalBrowser': {},
+            'browser': {}
+        },
+        {
+            'name': 'jquery',
+            'version': '2.1.4',
+            'fileUrl': 'file:/Users/jorozco/projects/codeforcary/artProject/work/node_modules/jquery/package.json',
+            'main': 'dist/jquery.js',
             'globalBrowser': {},
             'browser': {}
         },
@@ -22216,8 +22216,6 @@ define('pages/cities/cities.viewmodel', [
         }
     });
 });
-/*can@2.3.0-pre.1#util/array/makeArray*/
-System.set('can@2.3.0-pre.1#util/array/makeArray', System.newModule({}));
 /*components/geolocation/geolocation.stache!can@2.3.0-pre.1#view/stache/system*/
 define('components/geolocation/geolocation.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
     return stache([{
@@ -22225,8 +22223,6 @@ define('components/geolocation/geolocation.stache!can@2.3.0-pre.1#view/stache/sy
             'args': []
         }]);
 });
-/*can@2.3.0-pre.1#util/domless/domless*/
-System.set('can@2.3.0-pre.1#util/domless/domless', System.newModule({}));
 /*utils/localStorage*/
 define('utils/localStorage', [
     'exports',
@@ -22628,6 +22624,8 @@ define('pages/city-detail/city-detail.viewmodel', [
         artwork: { items: [] }
     });
 });
+/*can@2.3.0-pre.1#util/array/makeArray*/
+System.set('can@2.3.0-pre.1#util/array/makeArray', System.newModule({}));
 /*components/slide-show/slide-show.stache!can@2.3.0-pre.1#view/stache/system*/
 define('components/slide-show/slide-show.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
     return stache([
@@ -23513,6 +23511,8 @@ define('components/slide-show/slide-show.stache!can@2.3.0-pre.1#view/stache/syst
         }
     ]);
 });
+/*can@2.3.0-pre.1#util/domless/domless*/
+System.set('can@2.3.0-pre.1#util/domless/domless', System.newModule({}));
 /*components/slide-show/viewmodel*/
 define('components/slide-show/viewmodel', [
     'exports',
