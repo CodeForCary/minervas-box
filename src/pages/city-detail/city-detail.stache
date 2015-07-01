@@ -1,10 +1,8 @@
 <h2>{{city.cityName}}</h2>
 
+<p class="pull-right city-flag"><img src="#" class="img-rounded" alt="{{city.cityName}} flag"></p>
+
 <p>{{city.shortDescription}}</p>
 
 <h3>Artwork</h3>
-<div class="city-artwork">
-{{#artwork.items}}
-{{.}}
-{{/artwork.items}}
-</div>
+<ma-slide-show items="{artwork}"></ma-slide-show>

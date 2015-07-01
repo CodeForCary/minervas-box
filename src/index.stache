@@ -1,23 +1,15 @@
 <ma-header></ma-header>
 
-<ma-router route-key="page" route-path="" route-target="home">
+<ma-router route-path="" route-key="page" route-target="home">
     <mp-home></mp-home>
 </ma-router>
 
-<ma-router route-key="page" route-target="cities">
+<ma-router route-path="cities/:filter" route-key="page||filter" route-target="cities||near-me">
     <mp-cities></mp-cities>
 </ma-router>
 
-<ma-router route-key="page" route-target=":stateKey/all">
-    <mp-cities></mp-cities>
-</ma-router>
-
-<ma-router route-key="page" route-target=":state/:city">
+<ma-router route-path=":state/:city" route-key="page" route-target="cities">
     <mp-city-detail></mp-city-detail>
-</ma-router>
-
-<ma-router route-key="page" route-target="near-me">
-    <mp-near-me></mp-near-me>
 </ma-router>
 
 <ma-footer></ma-footer>

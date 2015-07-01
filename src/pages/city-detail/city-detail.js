@@ -4,6 +4,8 @@ import template from './city-detail.stache!';
 import viewmodel from './city-detail.viewmodel';
 import './city-detail.less!';
 
+import 'components/slide-show/slide-show';
+
 can.Component.extend({
     tag: 'mp-city-detail',
     template: template,

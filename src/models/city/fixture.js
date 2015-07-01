@@ -8,6 +8,9 @@ var cityList = [
 ];
 
 can.fixture('GET /city.json', function(params) {
+    var resp = [],
+        limit = params.limit || 5;
+    resp = cityList;
     if (params.city) {
 
     }
@@ -15,6 +18,12 @@ can.fixture('GET /city.json', function(params) {
     if (params.coords) {
 
     }
+    // 
+    // if (limit) {
+    //     var offset = params.offset || 0;
+    //     resp.splice(offset, limit);
+    // }
+
     return cityList;
 });
 
