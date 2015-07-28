@@ -6270,6 +6270,14 @@ define('package.json!npm', [
             'browser': {}
         },
         {
+            'name': 'bootstrap',
+            'version': '3.3.5',
+            'fileUrl': 'file:/Users/jorozco/projects/codeforcary/artProject/work/node_modules/bootstrap/package.json',
+            'main': './dist/js/npm',
+            'globalBrowser': {},
+            'browser': {}
+        },
+        {
             'name': 'can',
             'version': '2.3.0-pre.1',
             'fileUrl': 'file:/Users/jorozco/projects/codeforcary/artProject/work/node_modules/can/package.json',
@@ -6388,14 +6396,6 @@ define('package.json!npm', [
                 'can#map/sort/sort': 'can#dist/cjs/map/sort/sort',
                 'can#util/vdom/build_fragment/build_fragment': 'can#dist/cjs/util/vdom/build_fragment/build_fragment'
             }
-        },
-        {
-            'name': 'bootstrap',
-            'version': '3.3.5',
-            'fileUrl': 'file:/Users/jorozco/projects/codeforcary/artProject/work/node_modules/bootstrap/package.json',
-            'main': './dist/js/npm',
-            'globalBrowser': {},
-            'browser': {}
         },
         {
             'name': 'jquery',
@@ -20616,7 +20616,7 @@ define('models/artwork/fixture', [
             {
                 id: 1,
                 title: 'Heyo',
-                url: 'http://placekitten.com/g/300/200',
+                url: 'http://placekitten.com/g/200/300',
                 description: 'Lorem ipsum'
             },
             {
@@ -20677,6 +20677,14 @@ define('models/city/fixture', [
                 cityName: 'Durham',
                 logoSrc: 'http://placekitten.com/g/50/50',
                 shortDescription: 'Durham is north of Cary.'
+            },
+            {
+                id: 4,
+                cityKey: 'chapel-hill',
+                stateKey: 'nc',
+                cityName: 'Chapel Hill',
+                logoSrc: 'http://placekitten.com/g/50/50',
+                shortDescription: 'Chapel Hill is south of Durham.'
             }
         ];
     can.fixture('GET /city.json', function (params) {
@@ -22088,7 +22096,99 @@ define('pages/cities/cities.stache!can@2.3.0-pre.1#view/stache/system', ['can/vi
         },
         {
             'tokenType': 'chars',
-            'args': ['\n\n']
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'bit-list',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['data']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['{cities}']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['data']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['offset']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['{offset}']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['offset']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'bit-list',
+                false
+            ]
+        },
+        {
+            'tokenType': 'close',
+            'args': ['bit-list']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'bit-pagintion',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['data']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['{cities}']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['data']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['offset']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['{offset}']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['offset']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'bit-pagintion',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['bit-pagintion']
         },
         {
             'tokenType': 'close',
@@ -22560,38 +22660,68 @@ define('pages/city-detail/city-detail.stache!can@2.3.0-pre.1#view/stache/system'
             'args': ['h3']
         },
         {
+            'tokenType': 'special',
+            'args': ['#artworks']
+        },
+        {
             'tokenType': 'chars',
-            'args': ['\n']
+            'args': ['\n    ']
         },
         {
             'tokenType': 'start',
             'args': [
-                'ma-slide-show',
+                'h4',
                 false
             ]
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['items']
-        },
-        {
-            'tokenType': 'attrValue',
-            'args': ['{artwork}']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['items']
         },
         {
             'tokenType': 'end',
             'args': [
-                'ma-slide-show',
+                'h4',
                 false
             ]
         },
         {
+            'tokenType': 'special',
+            'args': ['title']
+        },
+        {
             'tokenType': 'close',
-            'args': ['ma-slide-show']
+            'args': ['h4']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'img',
+                true
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['src']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['url']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['src']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'img',
+                true
+            ]
+        },
+        {
+            'tokenType': 'special',
+            'args': ['/artworks']
         },
         {
             'tokenType': 'chars',
@@ -22603,29 +22733,48 @@ define('pages/city-detail/city-detail.stache!can@2.3.0-pre.1#view/stache/system'
         }
     ]);
 });
+/*models/artwork/artwork*/
+define('models/artwork/artwork', [
+    'exports',
+    'module',
+    'can',
+    'can/map/define/define'
+], function (exports, module, _can, _canMapDefineDefine) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    module.exports = can.Model.extend({
+        findAll: 'GET /artwork.json',
+        findOne: 'GET /artwork/{id}.json'
+    }, {});
+});
 /*pages/city-detail/city-detail.viewmodel*/
 define('pages/city-detail/city-detail.viewmodel', [
     'exports',
     'module',
     'can',
     'can/map/define/define',
-    'models/city/city'
-], function (exports, module, _can, _canMapDefineDefine, _modelsCityCity) {
+    'models/city/city',
+    'models/artwork/artwork'
+], function (exports, module, _can, _canMapDefineDefine, _modelsCityCity, _modelsArtworkArtwork) {
     'use strict';
     var _interopRequire = function (obj) {
         return obj && obj.__esModule ? obj['default'] : obj;
     };
     var can = _interopRequire(_can);
     var City = _interopRequire(_modelsCityCity);
+    var Artwork = _interopRequire(_modelsArtworkArtwork);
     module.exports = can.Map.extend({
-        define: {},
+        define: {
+            artworks: { value: [] },
+            city: { Value: City }
+        },
         City: City,
-        city: {},
-        artwork: { items: [] }
+        Artwork: Artwork
     });
 });
-/*can@2.3.0-pre.1#util/array/makeArray*/
-System.set('can@2.3.0-pre.1#util/array/makeArray', System.newModule({}));
 /*components/slide-show/slide-show.stache!can@2.3.0-pre.1#view/stache/system*/
 define('components/slide-show/slide-show.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
     return stache([
@@ -23511,8 +23660,6 @@ define('components/slide-show/slide-show.stache!can@2.3.0-pre.1#view/stache/syst
         }
     ]);
 });
-/*can@2.3.0-pre.1#util/domless/domless*/
-System.set('can@2.3.0-pre.1#util/domless/domless', System.newModule({}));
 /*components/slide-show/viewmodel*/
 define('components/slide-show/viewmodel', [
     'exports',
@@ -23583,6 +23730,12 @@ define('pages/city-detail/city-detail', [
                     }, def = vm.City.findOne(params);
                 def.then(function (resp) {
                     vm.attr('city', resp);
+                });
+            },
+            '{viewModel} city': function () {
+                var vm = this.viewModel, params = {}, def = vm.Artwork.findAll(params);
+                def.then(function (resp) {
+                    vm.attr('artworks', resp);
                 });
             }
         }
@@ -23751,6 +23904,10 @@ define('pages/near-me/near-me.stache!can@2.3.0-pre.1#view/stache/system', ['can/
         }
     ]);
 });
+/*can@2.3.0-pre.1#util/domless/domless*/
+System.set('can@2.3.0-pre.1#util/domless/domless', System.newModule({}));
+/*can@2.3.0-pre.1#util/array/makeArray*/
+System.set('can@2.3.0-pre.1#util/array/makeArray', System.newModule({}));
 /*pages/near-me/near-me.viewmodel*/
 define('pages/near-me/near-me.viewmodel', [
     'exports',
