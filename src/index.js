@@ -6294,14 +6294,6 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'jquery',
-            'version': '2.1.4',
-            'fileUrl': 'file:/Users/jorozco/projects/codeforcary/artProject/work/node_modules/jquery/package.json',
-            'main': 'dist/jquery.js',
-            'globalBrowser': {},
-            'browser': {}
-        },
-        {
             'name': 'can',
             'version': '2.3.0-pre.1',
             'fileUrl': 'file:/Users/jorozco/projects/codeforcary/artProject/work/node_modules/can/package.json',
@@ -6420,6 +6412,14 @@ define('package.json!npm', [
                 'can#map/sort/sort': 'can#dist/cjs/map/sort/sort',
                 'can#util/vdom/build_fragment/build_fragment': 'can#dist/cjs/util/vdom/build_fragment/build_fragment'
             }
+        },
+        {
+            'name': 'jquery',
+            'version': '2.1.4',
+            'fileUrl': 'file:/Users/jorozco/projects/codeforcary/artProject/work/node_modules/jquery/package.json',
+            'main': 'dist/jquery.js',
+            'globalBrowser': {},
+            'browser': {}
         },
         {
             'name': 'lodash',
@@ -19888,6 +19888,270 @@ define('src/index.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/
         },
         {
             'tokenType': 'attrValue',
+            'args': ['artwork']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['route-path']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['route-key']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['page']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['route-key']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['route-target']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['artwork']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['route-target']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'ma-router',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'mark',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'mark',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['Artwork']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['mark']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['ma-router']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n\n']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'ma-router',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['route-path']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['artists']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['route-path']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['route-key']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['page']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['route-key']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['route-target']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['artists']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['route-target']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'ma-router',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'mark',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'mark',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['Artists']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['mark']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['ma-router']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n\n']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'ma-router',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['route-path']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['collections']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['route-path']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['route-key']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['page']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['route-key']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['route-target']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['collections']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['route-target']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'ma-router',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'mark',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'mark',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['Collections']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['mark']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['ma-router']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n\n']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'ma-router',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['route-path']
+        },
+        {
+            'tokenType': 'attrValue',
             'args': [':state/:city']
         },
         {
@@ -27123,8 +27387,8 @@ define('bit-grid@0.0.1#bit-search/bit-search', [
     });
     module.exports = ViewModel;
 });
-/*can@2.3.0-pre.1#util/array/makeArray*/
-System.set('can@2.3.0-pre.1#util/array/makeArray', System.newModule({}));
+/*can@2.3.0-pre.1#util/domless/domless*/
+System.set('can@2.3.0-pre.1#util/domless/domless', System.newModule({}));
 /*bit-grid@0.0.1#bit-pagination/bit-pagination.stache!can@2.3.0-pre.1#view/stache/system*/
 define('bit-grid@0.0.1#bit-pagination/bit-pagination.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
     return stache([
@@ -27242,8 +27506,8 @@ define('bit-grid@0.0.1#bit-pagination/bit-pagination.stache!can@2.3.0-pre.1#view
         }
     ]);
 });
-/*can@2.3.0-pre.1#util/domless/domless*/
-System.set('can@2.3.0-pre.1#util/domless/domless', System.newModule({}));
+/*can@2.3.0-pre.1#util/array/makeArray*/
+System.set('can@2.3.0-pre.1#util/array/makeArray', System.newModule({}));
 /*bit-grid@0.0.1#bit-pagination/viewmodel*/
 define('bit-grid@0.0.1#bit-pagination/viewmodel', function (require, exports, module) {
     var can = require('can');
