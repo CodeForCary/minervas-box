@@ -8,18 +8,7 @@
         {{/showSearch}}
     </div>
     <bit-geolocation></bit-geolocation>
-    <bit-search model="{Cities}" results="{cities}" search-query="{params}"></bit-search>
-    {{#cities}}
-    <a href="#" class="btn city" can-click="updateContext city=cityKey state=stateKey">
-        <h3 class="city-name">{{cityName}}</h3>
-        <img src="{{logoSrc}}" class="city-logo">
-        <p class="city-short-desc">{{shortDescription}}</p>
-    </a>
-    {{/cities}}
-    {{^cities}}
-    <p>Ack! No cities found for <code>{{params.city}}</code>.</p>
-    {{/cities}}
-    <bit-pagination count="{cities.count}" offset="{params.offset}" limit="{params.limit}"></bit-pagination>
+    <ma-city-list params="{params}"></ma-city-list>
 </div>
 {{#showSidebar}}
 <ma-sidebar place="right">

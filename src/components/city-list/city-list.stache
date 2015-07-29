@@ -1,0 +1,14 @@
+<bit-search model="{Cities}" results="{cities}" search-query="{params}"></bit-search>
+<div class="city-items {{^cities}}no-results{{/cities}}">
+    {{#cities}}
+    <a href="#" class="btn city" can-click="updateContext city=cityKey state=stateKey">
+        <h3 class="city-name">{{cityName}}</h3>
+        <img src="{{logoSrc}}" class="city-logo">
+        <p class="city-short-desc">{{shortDescription}}</p>
+    </a>
+    {{/cities}}
+    {{^cities}}
+    <p>Ack! No cities found for <code>{{params.city}}</code>.</p>
+    {{/cities}}
+</div>
+<bit-pagination count="{cities.count}" offset="{params.offset}" limit="{params.limit}"></bit-pagination>

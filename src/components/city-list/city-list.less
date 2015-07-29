@@ -1,0 +1,16 @@
+@import '../../../node_modules/bootstrap/less/variables.less';
+@import '../../../node_modules/bootstrap/less/mixins/opacity.less';
+@import '../../../node_modules/bootstrap/less/mixins/tab-focus.less';
+@import '../../../node_modules/bootstrap/less/mixins/vendor-prefixes.less';
+@import '../../../node_modules/bootstrap/less/mixins/buttons.less';
+@import '../../../node_modules/bootstrap/less/buttons.less';
+
+ma-city-list {
+    .pagination-item {
+        .btn();
+
+        &.active {
+            .btn-primary();
+        }
+    }
+}

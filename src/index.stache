@@ -8,6 +8,18 @@
     <mp-cities></mp-cities>
 </ma-router>
 
+<ma-router route-path="artwork" route-key="page" route-target="artwork">
+    <mark>Artwork</mark>
+</ma-router>
+
+<ma-router route-path="artists" route-key="page" route-target="artists">
+    <mark>Artists</mark>
+</ma-router>
+
+<ma-router route-path="collections" route-key="page" route-target="collections">
+    <mark>Collections</mark>
+</ma-router>
+
 <ma-router route-path=":state/:city" route-key="page" route-target="cities">
     <mp-city-detail></mp-city-detail>
 </ma-router>

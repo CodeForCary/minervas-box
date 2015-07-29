@@ -5,19 +5,11 @@ import viewmodel from './cities.viewmodel';
 import './cities.less!';
 
 import 'components/geolocation/geolocation';
-import 'bit-grid/bit-search/';
-import 'bit-grid/bit-pagination/';
+import 'components/city-list/city-list';
 //import 'utils/toggleFilterAttr';
 
 can.Component.extend({
     tag: 'mp-cities',
     template: template,
-    scope: viewmodel,
-    events: {
-        '{params} change': function (params, ev, key) {
-            if (key === 'city') {
-                params.attr('offset', 0);
-            }
-        }
-    }
+    scope: viewmodel
 });
