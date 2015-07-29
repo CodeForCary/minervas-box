@@ -5793,7 +5793,7 @@ if (typeof System !== "undefined") {
 /*[system-bundles-config]*/
 System.paths["bundles/*.css"] ="../../../../../../../minervas-box/*css";
 System.paths["bundles/*"] = "../../../../../../../minervas-box/*.js";
-System.bundles = {"bundles/src/index.css!":["src/index.less!$less","pages/cities/cities.less!$less","bit-grid@0.0.1#bit-search/bit-search.less!$less","bit-grid@0.0.1#bit-pagination/bit-pagination.less!$less","pages/city-detail/city-detail.less!$less"]};
+System.bundles = {"bundles/src/index.css!":["src/index.less!$less","pages/cities/cities.less!$less","components/city-list/city-list.less!$less","bit-grid@0.0.1#bit-search/bit-search.less!$less","bit-grid@0.0.1#bit-pagination/bit-pagination.less!$less","pages/city-detail/city-detail.less!$less"]};
 /*npm-utils*/
 define('npm-utils', function (require, exports, module) {
     var npmModuleRegEx = /.+@.+\..+\..+#.+/;
@@ -22584,6 +22584,316 @@ define('pages/cities/cities.stache!can@2.3.0-pre.1#view/stache/system', ['can/vi
         {
             'tokenType': 'start',
             'args': [
+                'ma-city-list',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['params']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['{params}']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['params']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'ma-city-list',
+                false
+            ]
+        },
+        {
+            'tokenType': 'close',
+            'args': ['ma-city-list']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['div']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['#showSidebar']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'ma-sidebar',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['place']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['right']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['place']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'ma-sidebar',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'h3',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'h3',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['All cities...']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['h3']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['ma-sidebar']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['/showSidebar']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'done',
+            'args': []
+        }
+    ]);
+});
+/*pages/cities/cities.viewmodel*/
+define('pages/cities/cities.viewmodel', [
+    'exports',
+    'module',
+    'can',
+    'can/map/define/define'
+], function (exports, module, _can, _canMapDefineDefine) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    module.exports = can.Map.extend({
+        define: {
+            showSearch: {
+                value: false,
+                type: 'boolean'
+            },
+            params: {
+                value: {
+                    offset: 0,
+                    limit: 3
+                }
+            }
+        },
+        updateContext: function (hash) {
+            can.route.attr(hash);
+            return false;
+        },
+        toggleFilter: function (ctx, $el) {
+            var val = $el.text();
+            if (val === 'Near Me') {
+                return;
+            }
+            if (val === 'Search') {
+                this.attr('showSearch', !this.attr('showSearch'));
+            }
+        }
+    });
+});
+/*components/geolocation/geolocation.stache!can@2.3.0-pre.1#view/stache/system*/
+define('components/geolocation/geolocation.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
+    return stache([{
+            'tokenType': 'done',
+            'args': []
+        }]);
+});
+/*utils/localStorage*/
+define('utils/localStorage', [
+    'exports',
+    'module',
+    'can'
+], function (exports, module, _can) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    module.exports = can.Construct.extend({ hasLocalStorage: false }, {
+        init: function () {
+            if (window.localStorage) {
+                this.hasLocalStorage = true;
+            }
+        },
+        attr: function () {
+            var keyName, val;
+            if (arguments.length > 0) {
+                keyName = arguments[0];
+                if (arguments.length === 2) {
+                    val = arguments[1];
+                    if (typeof arguments[1] !== 'string') {
+                        val = JSON.stringify(val);
+                    }
+                    return window.localStorage.setItem(keyName, val);
+                } else {
+                    return JSON.parse(window.localStorage.getItem(keyName));
+                }
+            }
+            return;
+        },
+        removeAttr: function (keyName) {
+            window.localStorage.removeItem(keyName);
+        },
+        length: function () {
+            window.localStorage.length;
+        },
+        key: function (keyName) {
+            window.localStorage.key(keyName) || -1;
+        },
+        clear: function () {
+            window.localStorage.clear();
+        }
+    });
+});
+/*models/geolocation/geolocation*/
+define('models/geolocation/geolocation', [
+    'exports',
+    'module',
+    'can',
+    'can/map/define/define',
+    'utils/localStorage'
+], function (exports, module, _can, _canMapDefineDefine, _utilsLocalStorage) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    var Storage = _interopRequire(_utilsLocalStorage);
+    var storage = Storage(), dpipApiKey = '0f5a6c8d64f29d3eda22820a9b52acdbcc315647', ipLocUrl = 'http://api.db-ip.com/addrinfo?&api_key=' + dpipApiKey + '&addr=';
+    module.exports = can.Model.extend({
+        findOne: function () {
+            var resp, ipDef, ipLocDef;
+            return can.Deferred(function (defer) {
+                if (!storage.key('ipLocation')) {
+                    ipDef = can.ajax({
+                        url: 'http://tools.endgamestudio.com/clientip.php',
+                        type: 'GET'
+                    });
+                    ipDef.then(function (ipData) {
+                        ipLocDef = can.ajax({
+                            url: ipLocUrl + ipData.ip,
+                            type: 'GET'
+                        });
+                        ipLocDef.then(function (locData) {
+                            resp = ipData;
+                            resp.location = locData;
+                            storage.attr('ipLocation', resp);
+                            defer.resolve(resp);
+                        });
+                    });
+                } else {
+                    resp = storage.attr('ipLocation');
+                    defer.resolve(resp);
+                }
+            });
+        }
+    }, {});
+});
+/*components/geolocation/viewmodel*/
+define('components/geolocation/viewmodel', [
+    'exports',
+    'module',
+    'can',
+    'can/map/define/define',
+    'models/geolocation/geolocation'
+], function (exports, module, _can, _canMapDefineDefine, _modelsGeolocationGeolocation) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    var Geolocation = _interopRequire(_modelsGeolocationGeolocation);
+    module.exports = can.Map.extend({
+        define: { location: { value: {} } },
+        Geolocation: Geolocation
+    });
+});
+/*components/geolocation/geolocation*/
+define('components/geolocation/geolocation', [
+    'exports',
+    'can',
+    'can/view/stache/stache',
+    './geolocation.stache!',
+    './viewmodel'
+], function (exports, _can, _canViewStacheStache, _geolocationStache, _viewmodel) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    var template = _interopRequire(_geolocationStache);
+    var viewmodel = _interopRequire(_viewmodel);
+    can.Component.extend({
+        tag: 'bit-geolocation',
+        template: template,
+        scope: viewmodel,
+        events: {
+            inserted: function () {
+                var vm = this.viewModel, GeoModel = vm.attr('Geolocation');
+                GeoModel.findOne({}).then(function (loc) {
+                    vm.attr('location', loc);
+                    console.log(loc);
+                });
+            }
+        }
+    });
+});
+/*components/city-list/city-list.stache!can@2.3.0-pre.1#view/stache/system*/
+define('components/city-list/city-list.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
+    return stache([
+        {
+            'tokenType': 'start',
+            'args': [
                 'bit-search',
                 false
             ]
@@ -22634,6 +22944,48 @@ define('pages/cities/cities.stache!can@2.3.0-pre.1#view/stache/system', ['can/vi
         {
             'tokenType': 'close',
             'args': ['bit-search']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['city-items ']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['^cities']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['no-results']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['/cities']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'div',
+                false
+            ]
         },
         {
             'tokenType': 'special',
@@ -22889,7 +23241,15 @@ define('pages/cities/cities.stache!can@2.3.0-pre.1#view/stache/system', ['can/vi
         },
         {
             'tokenType': 'chars',
-            'args': ['\n    ']
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['div']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
         },
         {
             'tokenType': 'start',
@@ -22950,86 +23310,6 @@ define('pages/cities/cities.stache!can@2.3.0-pre.1#view/stache/system', ['can/vi
             'args': ['\n']
         },
         {
-            'tokenType': 'close',
-            'args': ['div']
-        },
-        {
-            'tokenType': 'special',
-            'args': ['#showSidebar']
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n']
-        },
-        {
-            'tokenType': 'start',
-            'args': [
-                'ma-sidebar',
-                false
-            ]
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['place']
-        },
-        {
-            'tokenType': 'attrValue',
-            'args': ['right']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['place']
-        },
-        {
-            'tokenType': 'end',
-            'args': [
-                'ma-sidebar',
-                false
-            ]
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n    ']
-        },
-        {
-            'tokenType': 'start',
-            'args': [
-                'h3',
-                false
-            ]
-        },
-        {
-            'tokenType': 'end',
-            'args': [
-                'h3',
-                false
-            ]
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['All cities...']
-        },
-        {
-            'tokenType': 'close',
-            'args': ['h3']
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n']
-        },
-        {
-            'tokenType': 'close',
-            'args': ['ma-sidebar']
-        },
-        {
-            'tokenType': 'special',
-            'args': ['/showSidebar']
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n']
-        },
-        {
             'tokenType': 'done',
             'args': []
         }
@@ -23052,8 +23332,8 @@ define('models/city/city', [
         findOne: 'GET /cities/{state}/{city}'
     }, {});
 });
-/*pages/cities/cities.viewmodel*/
-define('pages/cities/cities.viewmodel', [
+/*components/city-list/viewmodel*/
+define('components/city-list/viewmodel', [
     'exports',
     'module',
     'can',
@@ -23067,180 +23347,8 @@ define('pages/cities/cities.viewmodel', [
     var can = _interopRequire(_can);
     var Cities = _interopRequire(_modelsCityCity);
     module.exports = can.Map.extend({
-        define: {
-            showSearch: {
-                value: false,
-                type: 'boolean'
-            },
-            cities: { value: [] },
-            params: {
-                value: {
-                    offset: 0,
-                    limit: 3
-                }
-            }
-        },
-        Cities: Cities,
-        updateContext: function (hash) {
-            can.route.attr(hash);
-            return false;
-        },
-        toggleFilter: function (ctx, $el) {
-            var val = $el.text();
-            if (val === 'Near Me') {
-                return;
-            }
-            if (val === 'Search') {
-                this.attr('showSearch', !this.attr('showSearch'));
-            }
-        }
-    });
-});
-/*components/geolocation/geolocation.stache!can@2.3.0-pre.1#view/stache/system*/
-define('components/geolocation/geolocation.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
-    return stache([{
-            'tokenType': 'done',
-            'args': []
-        }]);
-});
-/*utils/localStorage*/
-define('utils/localStorage', [
-    'exports',
-    'module',
-    'can'
-], function (exports, module, _can) {
-    'use strict';
-    var _interopRequire = function (obj) {
-        return obj && obj.__esModule ? obj['default'] : obj;
-    };
-    var can = _interopRequire(_can);
-    module.exports = can.Construct.extend({ hasLocalStorage: false }, {
-        init: function () {
-            if (window.localStorage) {
-                this.hasLocalStorage = true;
-            }
-        },
-        attr: function () {
-            var keyName, val;
-            if (arguments.length > 0) {
-                keyName = arguments[0];
-                if (arguments.length === 2) {
-                    val = arguments[1];
-                    if (typeof arguments[1] !== 'string') {
-                        val = JSON.stringify(val);
-                    }
-                    return window.localStorage.setItem(keyName, val);
-                } else {
-                    return JSON.parse(window.localStorage.getItem(keyName));
-                }
-            }
-            return;
-        },
-        removeAttr: function (keyName) {
-            window.localStorage.removeItem(keyName);
-        },
-        length: function () {
-            window.localStorage.length;
-        },
-        key: function (keyName) {
-            window.localStorage.key(keyName) || -1;
-        },
-        clear: function () {
-            window.localStorage.clear();
-        }
-    });
-});
-/*models/geolocation/geolocation*/
-define('models/geolocation/geolocation', [
-    'exports',
-    'module',
-    'can',
-    'can/map/define/define',
-    'utils/localStorage'
-], function (exports, module, _can, _canMapDefineDefine, _utilsLocalStorage) {
-    'use strict';
-    var _interopRequire = function (obj) {
-        return obj && obj.__esModule ? obj['default'] : obj;
-    };
-    var can = _interopRequire(_can);
-    var Storage = _interopRequire(_utilsLocalStorage);
-    var storage = Storage(), dpipApiKey = '0f5a6c8d64f29d3eda22820a9b52acdbcc315647', ipLocUrl = 'http://api.db-ip.com/addrinfo?&api_key=' + dpipApiKey + '&addr=';
-    module.exports = can.Model.extend({
-        findOne: function () {
-            var resp, ipDef, ipLocDef;
-            return can.Deferred(function (defer) {
-                if (!storage.key('ipLocation')) {
-                    ipDef = can.ajax({
-                        url: 'http://tools.endgamestudio.com/clientip.php',
-                        type: 'GET'
-                    });
-                    ipDef.then(function (ipData) {
-                        ipLocDef = can.ajax({
-                            url: ipLocUrl + ipData.ip,
-                            type: 'GET'
-                        });
-                        ipLocDef.then(function (locData) {
-                            resp = ipData;
-                            resp.location = locData;
-                            storage.attr('ipLocation', resp);
-                            defer.resolve(resp);
-                        });
-                    });
-                } else {
-                    resp = storage.attr('ipLocation');
-                    defer.resolve(resp);
-                }
-            });
-        }
-    }, {});
-});
-/*components/geolocation/viewmodel*/
-define('components/geolocation/viewmodel', [
-    'exports',
-    'module',
-    'can',
-    'can/map/define/define',
-    'models/geolocation/geolocation'
-], function (exports, module, _can, _canMapDefineDefine, _modelsGeolocationGeolocation) {
-    'use strict';
-    var _interopRequire = function (obj) {
-        return obj && obj.__esModule ? obj['default'] : obj;
-    };
-    var can = _interopRequire(_can);
-    var Geolocation = _interopRequire(_modelsGeolocationGeolocation);
-    module.exports = can.Map.extend({
-        define: { location: { value: {} } },
-        Geolocation: Geolocation
-    });
-});
-/*components/geolocation/geolocation*/
-define('components/geolocation/geolocation', [
-    'exports',
-    'can',
-    'can/view/stache/stache',
-    './geolocation.stache!',
-    './viewmodel'
-], function (exports, _can, _canViewStacheStache, _geolocationStache, _viewmodel) {
-    'use strict';
-    var _interopRequire = function (obj) {
-        return obj && obj.__esModule ? obj['default'] : obj;
-    };
-    var can = _interopRequire(_can);
-    var template = _interopRequire(_geolocationStache);
-    var viewmodel = _interopRequire(_viewmodel);
-    can.Component.extend({
-        tag: 'bit-geolocation',
-        template: template,
-        scope: viewmodel,
-        events: {
-            inserted: function () {
-                var vm = this.viewModel, GeoModel = vm.attr('Geolocation');
-                GeoModel.findOne({}).then(function (loc) {
-                    vm.attr('location', loc);
-                    console.log(loc);
-                });
-            }
-        }
+        define: { cities: { value: [] } },
+        Cities: Cities
     });
 });
 /*bit-grid@0.0.1#bit-search/bit-search.stache!can@2.3.0-pre.1#view/stache/system*/
@@ -27387,8 +27495,6 @@ define('bit-grid@0.0.1#bit-search/bit-search', [
     });
     module.exports = ViewModel;
 });
-/*can@2.3.0-pre.1#util/domless/domless*/
-System.set('can@2.3.0-pre.1#util/domless/domless', System.newModule({}));
 /*bit-grid@0.0.1#bit-pagination/bit-pagination.stache!can@2.3.0-pre.1#view/stache/system*/
 define('bit-grid@0.0.1#bit-pagination/bit-pagination.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
     return stache([
@@ -27451,7 +27557,19 @@ define('bit-grid@0.0.1#bit-pagination/bit-pagination.stache!can@2.3.0-pre.1#view
         },
         {
             'tokenType': 'attrValue',
-            'args': ['pagination-item']
+            'args': ['pagination-item ']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['#is page .']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['active']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['/is']
         },
         {
             'tokenType': 'attrEnd',
@@ -27506,8 +27624,6 @@ define('bit-grid@0.0.1#bit-pagination/bit-pagination.stache!can@2.3.0-pre.1#view
         }
     ]);
 });
-/*can@2.3.0-pre.1#util/array/makeArray*/
-System.set('can@2.3.0-pre.1#util/array/makeArray', System.newModule({}));
 /*bit-grid@0.0.1#bit-pagination/viewmodel*/
 define('bit-grid@0.0.1#bit-pagination/viewmodel', function (require, exports, module) {
     var can = require('can');
@@ -27579,6 +27695,37 @@ define('bit-grid@0.0.1#bit-pagination/bit-pagination', [
         }
     });
 });
+/*components/city-list/city-list*/
+define('components/city-list/city-list', [
+    'exports',
+    'can',
+    'can/view/stache/stache',
+    './city-list.stache!',
+    './viewmodel',
+    './city-list.less!',
+    'bit-grid/bit-search/',
+    'bit-grid/bit-pagination/'
+], function (exports, _can, _canViewStacheStache, _cityListStache, _viewmodel, _cityListLess, _bitGridBitSearch, _bitGridBitPagination) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    var template = _interopRequire(_cityListStache);
+    var viewmodel = _interopRequire(_viewmodel);
+    can.Component.extend({
+        tag: 'ma-city-list',
+        template: template,
+        scope: viewmodel,
+        events: {
+            '{params} change': function (params, ev, key) {
+                if (key === 'city') {
+                    params.attr('offset', 0);
+                }
+            }
+        }
+    });
+});
 /*pages/cities/cities*/
 define('pages/cities/cities', [
     'exports',
@@ -27588,9 +27735,8 @@ define('pages/cities/cities', [
     './cities.viewmodel',
     './cities.less!',
     'components/geolocation/geolocation',
-    'bit-grid/bit-search/',
-    'bit-grid/bit-pagination/'
-], function (exports, _can, _canViewStacheStache, _citiesStache, _citiesViewmodel, _citiesLess, _componentsGeolocationGeolocation, _bitGridBitSearch, _bitGridBitPagination) {
+    'components/city-list/city-list'
+], function (exports, _can, _canViewStacheStache, _citiesStache, _citiesViewmodel, _citiesLess, _componentsGeolocationGeolocation, _componentsCityListCityList) {
     'use strict';
     var _interopRequire = function (obj) {
         return obj && obj.__esModule ? obj['default'] : obj;
@@ -27601,14 +27747,7 @@ define('pages/cities/cities', [
     can.Component.extend({
         tag: 'mp-cities',
         template: template,
-        scope: viewmodel,
-        events: {
-            '{params} change': function (params, ev, key) {
-                if (key === 'city') {
-                    params.attr('offset', 0);
-                }
-            }
-        }
+        scope: viewmodel
     });
 });
 /*pages/city-detail/city-detail.stache!can@2.3.0-pre.1#view/stache/system*/
@@ -28777,6 +28916,10 @@ define('components/slide-show/slide-show.stache!can@2.3.0-pre.1#view/stache/syst
         }
     ]);
 });
+/*can@2.3.0-pre.1#util/domless/domless*/
+System.set('can@2.3.0-pre.1#util/domless/domless', System.newModule({}));
+/*can@2.3.0-pre.1#util/array/makeArray*/
+System.set('can@2.3.0-pre.1#util/array/makeArray', System.newModule({}));
 /*components/slide-show/viewmodel*/
 define('components/slide-show/viewmodel', [
     'exports',
