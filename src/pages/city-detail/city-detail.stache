@@ -5,4 +5,7 @@
 <p>{{city.shortDescription}}</p>
 
 <h3>Artwork</h3>
-<ma-slide-show items="{artwork}"></ma-slide-show>
+{{#artworks}}
+    <h4>{{title}}</h4>
+    <img src="{{url}}">
+{{/artworks}}

@@ -21,6 +21,17 @@ can.Component.extend({
             def.then(function (resp) {
                 vm.attr('city', resp);
             });
+        },
+        '{viewModel} city': function () {
+            //load artwork
+            var vm = this.viewModel,
+                params = {},
+                def = vm.Artwork.findAll(params);
+
+            // Store artwork
+            def.then(function (resp) {
+                vm.attr('artworks', resp);
+            });
         }
     }
 });

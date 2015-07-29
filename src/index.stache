@@ -4,7 +4,7 @@
     <mp-home></mp-home>
 </ma-router>
 
-<ma-router route-path="cities/:filter" route-key="page||filter" route-target="cities||near-me">
+<ma-router route-path="cities" route-key="page" route-target="cities">
     <mp-cities></mp-cities>
 </ma-router>
 

@@ -1,6 +1,14 @@
 <div class="cities">
-    <h2>Cities Near Me...</h2>
+    <h2>Cities</h2>
+    <div class="row">
+        <button type="button" class="btn" can-click="toggleFilter">Near Me</button>
+        <button type="button" class="btn" can-click="toggleFilter">Search</button>
+        {{#showSearch}}
+        <input type="text" class="form-control" can-value="{params.city}">
+        {{/showSearch}}
+    </div>
     <bit-geolocation></bit-geolocation>
+    <bit-search model="{Cities}" results="{cities}" search-query="{params}"></bit-search>
     {{#cities}}
     <a href="#" class="btn city" can-click="updateContext city=cityKey state=stateKey">
         <h3 class="city-name">{{cityName}}</h3>
@@ -8,7 +16,10 @@
         <p class="city-short-desc">{{shortDescription}}</p>
     </a>
     {{/cities}}
-
+    {{^cities}}
+    <p>Ack! No cities found for <code>{{params.city}}</code>.</p>
+    {{/cities}}
+    <bit-pagination count="{cities.count}" offset="{params.offset}" limit="{params.limit}"></bit-pagination>
 </div>
 {{#showSidebar}}
 <ma-sidebar place="right">

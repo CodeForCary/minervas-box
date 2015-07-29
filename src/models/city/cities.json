@@ -1,0 +1,66 @@
+[
+    {
+        "id":1,
+        "cityKey": "cary",
+        "stateKey": "nc",
+        "cityName": "Cary",
+        "logoSrc":"http://placekitten.com/g/50/50",
+        "shortDescription": "Cary is located southeast of Raleigh."
+    },
+    {
+        "id":2,
+        "cityKey": "raleigh",
+        "stateKey": "nc",
+        "cityName": "Raleigh",
+        "logoSrc":"http://placekitten.com/g/50/50",
+        "shortDescription": "Raleigh is east of Durham."
+    },
+    {
+        "id":3,
+        "cityKey": "durham",
+        "stateKey": "nc",
+        "cityName": "Durham",
+        "logoSrc":"http://placekitten.com/g/50/50",
+        "shortDescription": "Durham is north of Cary."
+    },
+    {
+        "id":4,
+        "cityKey": "chapel-hill",
+        "stateKey": "nc",
+        "cityName": "Chapel Hill",
+        "logoSrc":"http://placekitten.com/g/50/50",
+        "shortDescription": "Chapel Hill is south of Durham."
+    },
+    {
+        "id":5,
+        "cityKey": "ventura",
+        "stateKey": "ca",
+        "cityName": "Ventura",
+        "logoSrc":"http://placekitten.com/g/50/50",
+        "shortDescription": "Ventura is on the west coast."
+    },
+    {
+        "id":6,
+        "cityKey": "san-francisco",
+        "stateKey": "ca",
+        "cityName": "San Francisco",
+        "logoSrc":"http://placekitten.com/g/50/50",
+        "shortDescription": "San Francisco is on the west coast."
+    },
+    {
+        "id":7,
+        "cityKey": "austin",
+        "stateKey": "tx",
+        "cityName": "Austin",
+        "logoSrc":"http://placekitten.com/g/50/50",
+        "shortDescription": "Austin is in south Texas, south of Dallas."
+    },
+    {
+        "id":8,
+        "cityKey": "portlan",
+        "stateKey": "or",
+        "cityName": "Portland",
+        "logoSrc":"http://placekitten.com/g/50/50",
+        "shortDescription": "Portland is on the northwest coast."
+    }
+]
