@@ -5,6 +5,9 @@ import viewmodel from './city-detail.viewmodel';
 import './city-detail.less!';
 
 import 'components/slide-show/slide-show';
+import 'components/map/map';
+import 'components/art-list/art-list';
+import 'components/tabs/tabs';
 
 can.Component.extend({
     tag: 'mp-city-detail',
@@ -20,17 +23,7 @@ can.Component.extend({
                 def = vm.City.findOne(params);
             def.then(function (resp) {
                 vm.attr('city', resp);
-            });
-        },
-        '{viewModel} city': function () {
-            //load artwork
-            var vm = this.viewModel,
-                params = {},
-                def = vm.Artwork.findAll(params);
-
-            // Store artwork
-            def.then(function (resp) {
-                vm.attr('artworks', resp);
+                vm.attr('artParams').attr('cityId', resp.id);
             });
         }
     }

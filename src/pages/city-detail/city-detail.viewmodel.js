@@ -1,17 +1,18 @@
 import can from 'can';
 import 'can/map/define/define';
 import City from 'models/city/city';
-import Artwork from 'models/artwork/artwork';
 
 export default can.Map.extend({
     define: {
-        artworks: {
-            value: []
-        },
         city: {
             Value: City
+        },
+        artParams: {
+            value: {}
+        },
+        artworks: {
+            value: []
         }
     },
-    City: City,
-    Artwork: Artwork
+    City: City
 });

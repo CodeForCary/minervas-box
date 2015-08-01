@@ -1,11 +1,32 @@
-<h2>{{city.cityName}}</h2>
+<div class="col-md-4">
+    <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+            <h2>{{city.cityName}}</h2>
 
-<p class="pull-right city-flag"><img src="#" class="img-rounded" alt="{{city.cityName}} flag"></p>
+            <p class="pull-right city-flag"><img src="{{city.logoSrc}}" class="img-rounded" alt="{{city.cityName}} flag"></p>
 
-<p>{{city.shortDescription}}</p>
+            <p>{{city.shortDescription}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="artwork-list">
+            <h3>Artwork List</h3>
+            {{#artworks}}
+            <li>{{title}}</li>
+            {{/artworks}}
+        </ul>
+    </div>
+</div>
 
-<h3>Artwork</h3>
-{{#artworks}}
-    <h4>{{title}}</h4>
-    <img src="{{url}}">
-{{/artworks}}
+<div class="col-md-7 col-md-offset-1">
+    <ma-tabs default-tab="artwork">
+        <ma-tab tab-title="Artwork">
+            <h3>Artwork</h3>
+            <ma-art-list params="{artParams}" artworks="{artworks}"></ma-art-list>
+        </ma-tab>
+        <ma-tab tab-title="Map">
+            <h3>Map</h3>
+            <ma-map></ma-map>
+        </ma-tab>
+    </ma-tabs>
+</div>
