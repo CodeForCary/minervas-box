@@ -4,8 +4,8 @@ import template from './city-list.stache!';
 import viewmodel from './viewmodel';
 import './city-list.less!';
 
-import 'bit-grid/bit-search/';
-import 'bit-grid/bit-pagination/';
+import 'bit-data-suite/bit-search/';
+import 'bit-data-suite/bit-pagination/';
 
 can.Component.extend({
     tag: 'ma-city-list',
