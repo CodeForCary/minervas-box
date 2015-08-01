@@ -25,7 +25,7 @@
     "documentjs": "^0.3.0-pre.1"
   },
   "dependencies": {
-    "bit-grid": "git+https://github.com/Macrofig/bit-data-utils.git#master",
+    "bit-data-suite": "git+https://github.com/bitovi-components/bit-data-suite.git#master",
     "bootstrap": "^3.3.5",
     "can": "^2.3.0-pre.1",
     "jquery": "^2.1.4",
