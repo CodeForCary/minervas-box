@@ -14,10 +14,6 @@ export default can.Map.extend({
             }
         }
     },
-    updateContext: function (hash) {
-        can.route.attr(hash);
-        return false;
-    },
     toggleFilter: function (ctx, $el) {
         var val = $el.text();
 

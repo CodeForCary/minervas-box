@@ -1,17 +1,12 @@
-<div class="cities">
+<div class="col-md-10 col-md-offset-1 cities">
     <h2>Cities</h2>
     <div class="row">
         <button type="button" class="btn" can-click="toggleFilter">Near Me</button>
         <button type="button" class="btn" can-click="toggleFilter">Search</button>
         {{#showSearch}}
-        <input type="text" class="form-control" can-value="{params.city}">
+        <input type="text" placeholder="Search by city" class="form-control" can-value="{params.city}">
         {{/showSearch}}
     </div>
     <bit-geolocation></bit-geolocation>
     <ma-city-list params="{params}"></ma-city-list>
 </div>
-{{#showSidebar}}
-<ma-sidebar place="right">
-    <h3>All cities...</h3>
-</ma-sidebar>
-{{/showSidebar}}
