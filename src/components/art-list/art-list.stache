@@ -1,0 +1,5 @@
+<bit-search model="{Artwork}" results="{artworks}" search-query="{params}"></bit-search>
+{{#artworks}}
+    <h4>{{title}}</h4>
+    <img src="{{url}}">
+{{/artworks}}
