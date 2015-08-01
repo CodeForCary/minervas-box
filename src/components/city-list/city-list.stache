@@ -1,9 +1,9 @@
 <bit-search model="{Cities}" results="{cities}" search-query="{params}"></bit-search>
-<div class="city-items {{^cities}}no-results{{/cities}}">
+<div class="city-items {{^cities.length}}no-results{{/cities.length}}">
     {{#cities}}
     <a href="#" class="btn city" can-click="updateContext city=cityKey state=stateKey">
         <h3 class="city-name">{{cityName}}</h3>
-        <img src="{{logoSrc}}" class="city-logo">
+        <img src="{{logoSrc}}" class="city-logo crop-width">
         <p class="city-short-desc">{{shortDescription}}</p>
     </a>
     {{/cities}}
@@ -11,4 +11,6 @@
     <p>Ack! No cities found for <code>{{params.city}}</code>.</p>
     {{/cities}}
 </div>
+{{#paginate}}
 <bit-pagination count="{cities.count}" offset="{params.offset}" limit="{params.limit}"></bit-pagination>
+{{/paginate}}

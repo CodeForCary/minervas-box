@@ -6,7 +6,15 @@ export default can.Map.extend({
     define: {
         cities: {
             value: []
+        },
+        paginate: {
+            value: true,
+            type: 'boolean'
         }
     },
     Cities: Cities,
+    updateContext: function (hash) {
+        can.route.attr(hash);
+        return false;
+    }
 });

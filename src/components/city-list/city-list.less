@@ -6,6 +6,26 @@
 @import '../../../node_modules/bootstrap/less/buttons.less';
 
 ma-city-list {
+    .city {
+        padding: 0 1rem;
+        position: relative;
+        border-bottom: 1px solid #dddddd;
+        text-align:left;
+        &:last-child{
+            border-bottom: none;
+
+        }
+
+        .city-logo {
+            position: absolute;
+            top:15px;
+            left: 0;
+        }
+
+        .city-name, .city-short-desc {
+            margin-left: 100px;
+        }
+    }
     .pagination-item {
         .btn();
 
