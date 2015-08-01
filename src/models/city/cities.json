@@ -4,7 +4,7 @@
         "cityKey": "cary",
         "stateKey": "nc",
         "cityName": "Cary",
-        "logoSrc":"http://placekitten.com/g/50/50",
+        "logoSrc":"https://upload.wikimedia.org/wikipedia/en/4/40/Flag_of_Cary%2C_North_Carolina.png",
         "shortDescription": "Cary is located southeast of Raleigh."
     },
     {
@@ -12,7 +12,7 @@
         "cityKey": "raleigh",
         "stateKey": "nc",
         "cityName": "Raleigh",
-        "logoSrc":"http://placekitten.com/g/50/50",
+        "logoSrc":"https://upload.wikimedia.org/wikipedia/commons/6/68/Flag_of_Raleigh.svg",
         "shortDescription": "Raleigh is east of Durham."
     },
     {
@@ -20,7 +20,7 @@
         "cityKey": "durham",
         "stateKey": "nc",
         "cityName": "Durham",
-        "logoSrc":"http://placekitten.com/g/50/50",
+        "logoSrc":"https://upload.wikimedia.org/wikipedia/commons/0/04/Flag_of_Durham%2C_North_Carolina.svg",
         "shortDescription": "Durham is north of Cary."
     },
     {
