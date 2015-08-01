@@ -6765,6 +6765,10 @@ button.close {
     display: none !important;
   }
 }
+.crop-width {
+  max-width: 100px;
+  height: auto;
+}
 
 /*pages/home/home.less!$less*/
 
