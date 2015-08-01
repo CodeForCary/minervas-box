@@ -6765,30 +6765,8 @@ button.close {
     display: none !important;
   }
 }
-#app {
-  margin: 0 auto;
-  width: 500px;
-}
 
-/*pages/cities/cities.less!$less*/
-mp-cities .city {
-  padding: 0 1rem;
-  position: relative;
-  border-bottom: 1px solid #dddddd;
-  text-align: left;
-}
-mp-cities .city:last-child {
-  border-bottom: none;
-}
-mp-cities .city .city-logo {
-  position: absolute;
-  top: 25px;
-  left: 0;
-}
-mp-cities .city .city-name,
-mp-cities .city .city-short-desc {
-  margin-left: 70px;
-}
+/*pages/home/home.less!$less*/
 
 /*components/city-list/city-list.less!$less*/
 .btn {
@@ -7306,6 +7284,25 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
 }
+ma-city-list .city {
+  padding: 0 1rem;
+  position: relative;
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+}
+ma-city-list .city:last-child {
+  border-bottom: none;
+}
+ma-city-list .city .city-logo {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  max-width: 75px;
+}
+ma-city-list .city .city-name,
+ma-city-list .city .city-short-desc {
+  margin-left: 70px;
+}
 ma-city-list .pagination-item {
   display: inline-block;
   margin-bottom: 0;
@@ -7433,8 +7430,13 @@ ma-city-list .pagination-item.active .badge {
 
 /*bit-grid@0.0.1#bit-pagination/bit-pagination.less!$less*/
 
+/*pages/cities/cities.less!$less*/
+
 /*pages/city-detail/city-detail.less!$less*/
 mp-city-detail .city-flag img {
   height: 100px;
-  width: 100px;
 }
+
+/*components/map/map.less!$less*/
+
+/*components/art-list/art-list.less!$less*/

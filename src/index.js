@@ -5793,7 +5793,7 @@ if (typeof System !== "undefined") {
 /*[system-bundles-config]*/
 System.paths["bundles/*.css"] ="../../../../../../../minervas-box/*css";
 System.paths["bundles/*"] = "../../../../../../../minervas-box/*.js";
-System.bundles = {"bundles/src/index.css!":["src/index.less!$less","pages/cities/cities.less!$less","components/city-list/city-list.less!$less","bit-grid@0.0.1#bit-search/bit-search.less!$less","bit-grid@0.0.1#bit-pagination/bit-pagination.less!$less","pages/city-detail/city-detail.less!$less"]};
+System.bundles = {"bundles/src/index.css!":["src/index.less!$less","pages/home/home.less!$less","components/city-list/city-list.less!$less","bit-grid@0.0.1#bit-search/bit-search.less!$less","bit-grid@0.0.1#bit-pagination/bit-pagination.less!$less","pages/cities/cities.less!$less","pages/city-detail/city-detail.less!$less","components/map/map.less!$less","components/art-list/art-list.less!$less"]};
 /*npm-utils*/
 define('npm-utils', function (require, exports, module) {
     var npmModuleRegEx = /.+@.+\..+\..+#.+/;
@@ -20938,7 +20938,7 @@ define('models/city/cities.json', [], function () {
             'cityKey': 'cary',
             'stateKey': 'nc',
             'cityName': 'Cary',
-            'logoSrc': 'http://placekitten.com/g/50/50',
+            'logoSrc': 'https://upload.wikimedia.org/wikipedia/en/4/40/Flag_of_Cary%2C_North_Carolina.png',
             'shortDescription': 'Cary is located southeast of Raleigh.'
         },
         {
@@ -20946,7 +20946,7 @@ define('models/city/cities.json', [], function () {
             'cityKey': 'raleigh',
             'stateKey': 'nc',
             'cityName': 'Raleigh',
-            'logoSrc': 'http://placekitten.com/g/50/50',
+            'logoSrc': 'https://upload.wikimedia.org/wikipedia/commons/6/68/Flag_of_Raleigh.svg',
             'shortDescription': 'Raleigh is east of Durham.'
         },
         {
@@ -20954,7 +20954,7 @@ define('models/city/cities.json', [], function () {
             'cityKey': 'durham',
             'stateKey': 'nc',
             'cityName': 'Durham',
-            'logoSrc': 'http://placekitten.com/g/50/50',
+            'logoSrc': 'https://upload.wikimedia.org/wikipedia/commons/0/04/Flag_of_Durham%2C_North_Carolina.svg',
             'shortDescription': 'Durham is north of Cary.'
         },
         {
@@ -21970,7 +21970,7 @@ define('pages/home/home.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/s
         },
         {
             'tokenType': 'attrValue',
-            'args': ['container']
+            'args': ['col-md-10 col-md-offset-1']
         },
         {
             'tokenType': 'attrEnd',
@@ -21982,28 +21982,6 @@ define('pages/home/home.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/s
                 'div',
                 false
             ]
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n    \n    \n    ']
-        },
-        {
-            'tokenType': 'start',
-            'args': [
-                'ma-map',
-                false
-            ]
-        },
-        {
-            'tokenType': 'end',
-            'args': [
-                'ma-map',
-                false
-            ]
-        },
-        {
-            'tokenType': 'close',
-            'args': ['ma-map']
         },
         {
             'tokenType': 'chars',
@@ -22038,28 +22016,6 @@ define('pages/home/home.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/s
         {
             'tokenType': 'chars',
             'args': ['\n        ']
-        },
-        {
-            'tokenType': 'start',
-            'args': [
-                'ma-artwork',
-                false
-            ]
-        },
-        {
-            'tokenType': 'end',
-            'args': [
-                'ma-artwork',
-                false
-            ]
-        },
-        {
-            'tokenType': 'close',
-            'args': ['ma-artwork']
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n        \n        ']
         },
         {
             'tokenType': 'start',
@@ -22119,7 +22075,7 @@ define('pages/home/home.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/s
         },
         {
             'tokenType': 'chars',
-            'args': ['\n    \n    ']
+            'args': ['\n\n    ']
         },
         {
             'tokenType': 'start',
@@ -22154,6 +22110,96 @@ define('pages/home/home.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/s
         {
             'tokenType': 'start',
             'args': [
+                'ma-artwork',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'ma-artwork',
+                false
+            ]
+        },
+        {
+            'tokenType': 'close',
+            'args': ['ma-artwork']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['div']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['row']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n        ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['col-md-4']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n            ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
                 'h3',
                 false
             ]
@@ -22175,45 +22221,143 @@ define('pages/home/home.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/s
         },
         {
             'tokenType': 'chars',
-            'args': ['\n        ']
+            'args': ['\n            ']
         },
         {
             'tokenType': 'start',
             'args': [
-                'ma-cities-list',
+                'ma-city-list',
                 false
             ]
         },
         {
             'tokenType': 'attrStart',
-            'args': ['filter']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['filter']
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['list-style']
+            'args': ['paginate']
         },
         {
             'tokenType': 'attrValue',
-            'args': ['simple']
+            'args': ['false']
         },
         {
             'tokenType': 'attrEnd',
-            'args': ['list-style']
+            'args': ['paginate']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['params']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['{params}']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['params']
         },
         {
             'tokenType': 'end',
             'args': [
-                'ma-cities-list',
+                'ma-city-list',
                 false
             ]
         },
         {
             'tokenType': 'close',
-            'args': ['ma-cities-list']
+            'args': ['ma-city-list']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n        ']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['div']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n        ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['col-md-6 col-md-offset-1']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n            ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'h3',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'h3',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['Map']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['h3']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n            ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'ma-map',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'ma-map',
+                false
+            ]
+        },
+        {
+            'tokenType': 'close',
+            'args': ['ma-map']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n        ']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['div']
         },
         {
             'tokenType': 'chars',
@@ -22253,637 +22397,13 @@ define('pages/home/viewmodel', [
         return obj && obj.__esModule ? obj['default'] : obj;
     };
     var can = _interopRequire(_can);
-    module.exports = can.Map.extend({ define: {} });
-});
-/*pages/home/home*/
-define('pages/home/home', [
-    'exports',
-    'can',
-    'can/view/stache/stache',
-    './home.stache!',
-    './viewmodel'
-], function (exports, _can, _canViewStacheStache, _homeStache, _viewmodel) {
-    'use strict';
-    var _interopRequire = function (obj) {
-        return obj && obj.__esModule ? obj['default'] : obj;
-    };
-    var can = _interopRequire(_can);
-    var template = _interopRequire(_homeStache);
-    var viewmodel = _interopRequire(_viewmodel);
-    can.Component.extend({
-        tag: 'mp-home',
-        template: template,
-        scope: viewmodel
-    });
-});
-/*pages/cities/cities.stache!can@2.3.0-pre.1#view/stache/system*/
-define('pages/cities/cities.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
-    return stache([
-        {
-            'tokenType': 'start',
-            'args': [
-                'div',
-                false
-            ]
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['class']
-        },
-        {
-            'tokenType': 'attrValue',
-            'args': ['cities']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['class']
-        },
-        {
-            'tokenType': 'end',
-            'args': [
-                'div',
-                false
-            ]
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n    ']
-        },
-        {
-            'tokenType': 'start',
-            'args': [
-                'h2',
-                false
-            ]
-        },
-        {
-            'tokenType': 'end',
-            'args': [
-                'h2',
-                false
-            ]
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['Cities']
-        },
-        {
-            'tokenType': 'close',
-            'args': ['h2']
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n    ']
-        },
-        {
-            'tokenType': 'start',
-            'args': [
-                'div',
-                false
-            ]
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['class']
-        },
-        {
-            'tokenType': 'attrValue',
-            'args': ['row']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['class']
-        },
-        {
-            'tokenType': 'end',
-            'args': [
-                'div',
-                false
-            ]
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n        ']
-        },
-        {
-            'tokenType': 'start',
-            'args': [
-                'button',
-                false
-            ]
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['type']
-        },
-        {
-            'tokenType': 'attrValue',
-            'args': ['button']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['type']
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['class']
-        },
-        {
-            'tokenType': 'attrValue',
-            'args': ['btn']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['class']
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['can-click']
-        },
-        {
-            'tokenType': 'attrValue',
-            'args': ['toggleFilter']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['can-click']
-        },
-        {
-            'tokenType': 'end',
-            'args': [
-                'button',
-                false
-            ]
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['Near Me']
-        },
-        {
-            'tokenType': 'close',
-            'args': ['button']
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n        ']
-        },
-        {
-            'tokenType': 'start',
-            'args': [
-                'button',
-                false
-            ]
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['type']
-        },
-        {
-            'tokenType': 'attrValue',
-            'args': ['button']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['type']
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['class']
-        },
-        {
-            'tokenType': 'attrValue',
-            'args': ['btn']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['class']
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['can-click']
-        },
-        {
-            'tokenType': 'attrValue',
-            'args': ['toggleFilter']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['can-click']
-        },
-        {
-            'tokenType': 'end',
-            'args': [
-                'button',
-                false
-            ]
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['Search']
-        },
-        {
-            'tokenType': 'close',
-            'args': ['button']
-        },
-        {
-            'tokenType': 'special',
-            'args': ['#showSearch']
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n        ']
-        },
-        {
-            'tokenType': 'start',
-            'args': [
-                'input',
-                true
-            ]
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['type']
-        },
-        {
-            'tokenType': 'attrValue',
-            'args': ['text']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['type']
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['class']
-        },
-        {
-            'tokenType': 'attrValue',
-            'args': ['form-control']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['class']
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['can-value']
-        },
-        {
-            'tokenType': 'attrValue',
-            'args': ['{params.city}']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['can-value']
-        },
-        {
-            'tokenType': 'end',
-            'args': [
-                'input',
-                true
-            ]
-        },
-        {
-            'tokenType': 'special',
-            'args': ['/showSearch']
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n    ']
-        },
-        {
-            'tokenType': 'close',
-            'args': ['div']
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n    ']
-        },
-        {
-            'tokenType': 'start',
-            'args': [
-                'bit-geolocation',
-                false
-            ]
-        },
-        {
-            'tokenType': 'end',
-            'args': [
-                'bit-geolocation',
-                false
-            ]
-        },
-        {
-            'tokenType': 'close',
-            'args': ['bit-geolocation']
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n    ']
-        },
-        {
-            'tokenType': 'start',
-            'args': [
-                'ma-city-list',
-                false
-            ]
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['params']
-        },
-        {
-            'tokenType': 'attrValue',
-            'args': ['{params}']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['params']
-        },
-        {
-            'tokenType': 'end',
-            'args': [
-                'ma-city-list',
-                false
-            ]
-        },
-        {
-            'tokenType': 'close',
-            'args': ['ma-city-list']
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n']
-        },
-        {
-            'tokenType': 'close',
-            'args': ['div']
-        },
-        {
-            'tokenType': 'special',
-            'args': ['#showSidebar']
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n']
-        },
-        {
-            'tokenType': 'start',
-            'args': [
-                'ma-sidebar',
-                false
-            ]
-        },
-        {
-            'tokenType': 'attrStart',
-            'args': ['place']
-        },
-        {
-            'tokenType': 'attrValue',
-            'args': ['right']
-        },
-        {
-            'tokenType': 'attrEnd',
-            'args': ['place']
-        },
-        {
-            'tokenType': 'end',
-            'args': [
-                'ma-sidebar',
-                false
-            ]
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n    ']
-        },
-        {
-            'tokenType': 'start',
-            'args': [
-                'h3',
-                false
-            ]
-        },
-        {
-            'tokenType': 'end',
-            'args': [
-                'h3',
-                false
-            ]
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['All cities...']
-        },
-        {
-            'tokenType': 'close',
-            'args': ['h3']
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n']
-        },
-        {
-            'tokenType': 'close',
-            'args': ['ma-sidebar']
-        },
-        {
-            'tokenType': 'special',
-            'args': ['/showSidebar']
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n']
-        },
-        {
-            'tokenType': 'done',
-            'args': []
-        }
-    ]);
-});
-/*pages/cities/cities.viewmodel*/
-define('pages/cities/cities.viewmodel', [
-    'exports',
-    'module',
-    'can',
-    'can/map/define/define'
-], function (exports, module, _can, _canMapDefineDefine) {
-    'use strict';
-    var _interopRequire = function (obj) {
-        return obj && obj.__esModule ? obj['default'] : obj;
-    };
-    var can = _interopRequire(_can);
     module.exports = can.Map.extend({
         define: {
-            showSearch: {
-                value: false,
-                type: 'boolean'
-            },
             params: {
                 value: {
                     offset: 0,
-                    limit: 3
+                    limit: 5
                 }
-            }
-        },
-        updateContext: function (hash) {
-            can.route.attr(hash);
-            return false;
-        },
-        toggleFilter: function (ctx, $el) {
-            var val = $el.text();
-            if (val === 'Near Me') {
-                return;
-            }
-            if (val === 'Search') {
-                this.attr('showSearch', !this.attr('showSearch'));
-            }
-        }
-    });
-});
-/*components/geolocation/geolocation.stache!can@2.3.0-pre.1#view/stache/system*/
-define('components/geolocation/geolocation.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
-    return stache([{
-            'tokenType': 'done',
-            'args': []
-        }]);
-});
-/*utils/localStorage*/
-define('utils/localStorage', [
-    'exports',
-    'module',
-    'can'
-], function (exports, module, _can) {
-    'use strict';
-    var _interopRequire = function (obj) {
-        return obj && obj.__esModule ? obj['default'] : obj;
-    };
-    var can = _interopRequire(_can);
-    module.exports = can.Construct.extend({ hasLocalStorage: false }, {
-        init: function () {
-            if (window.localStorage) {
-                this.hasLocalStorage = true;
-            }
-        },
-        attr: function () {
-            var keyName, val;
-            if (arguments.length > 0) {
-                keyName = arguments[0];
-                if (arguments.length === 2) {
-                    val = arguments[1];
-                    if (typeof arguments[1] !== 'string') {
-                        val = JSON.stringify(val);
-                    }
-                    return window.localStorage.setItem(keyName, val);
-                } else {
-                    return JSON.parse(window.localStorage.getItem(keyName));
-                }
-            }
-            return;
-        },
-        removeAttr: function (keyName) {
-            window.localStorage.removeItem(keyName);
-        },
-        length: function () {
-            window.localStorage.length;
-        },
-        key: function (keyName) {
-            window.localStorage.key(keyName) || -1;
-        },
-        clear: function () {
-            window.localStorage.clear();
-        }
-    });
-});
-/*models/geolocation/geolocation*/
-define('models/geolocation/geolocation', [
-    'exports',
-    'module',
-    'can',
-    'can/map/define/define',
-    'utils/localStorage'
-], function (exports, module, _can, _canMapDefineDefine, _utilsLocalStorage) {
-    'use strict';
-    var _interopRequire = function (obj) {
-        return obj && obj.__esModule ? obj['default'] : obj;
-    };
-    var can = _interopRequire(_can);
-    var Storage = _interopRequire(_utilsLocalStorage);
-    var storage = Storage(), dpipApiKey = '0f5a6c8d64f29d3eda22820a9b52acdbcc315647', ipLocUrl = 'http://api.db-ip.com/addrinfo?&api_key=' + dpipApiKey + '&addr=';
-    module.exports = can.Model.extend({
-        findOne: function () {
-            var resp, ipDef, ipLocDef;
-            return can.Deferred(function (defer) {
-                if (!storage.key('ipLocation')) {
-                    ipDef = can.ajax({
-                        url: 'http://tools.endgamestudio.com/clientip.php',
-                        type: 'GET'
-                    });
-                    ipDef.then(function (ipData) {
-                        ipLocDef = can.ajax({
-                            url: ipLocUrl + ipData.ip,
-                            type: 'GET'
-                        });
-                        ipLocDef.then(function (locData) {
-                            resp = ipData;
-                            resp.location = locData;
-                            storage.attr('ipLocation', resp);
-                            defer.resolve(resp);
-                        });
-                    });
-                } else {
-                    resp = storage.attr('ipLocation');
-                    defer.resolve(resp);
-                }
-            });
-        }
-    }, {});
-});
-/*components/geolocation/viewmodel*/
-define('components/geolocation/viewmodel', [
-    'exports',
-    'module',
-    'can',
-    'can/map/define/define',
-    'models/geolocation/geolocation'
-], function (exports, module, _can, _canMapDefineDefine, _modelsGeolocationGeolocation) {
-    'use strict';
-    var _interopRequire = function (obj) {
-        return obj && obj.__esModule ? obj['default'] : obj;
-    };
-    var can = _interopRequire(_can);
-    var Geolocation = _interopRequire(_modelsGeolocationGeolocation);
-    module.exports = can.Map.extend({
-        define: { location: { value: {} } },
-        Geolocation: Geolocation
-    });
-});
-/*components/geolocation/geolocation*/
-define('components/geolocation/geolocation', [
-    'exports',
-    'can',
-    'can/view/stache/stache',
-    './geolocation.stache!',
-    './viewmodel'
-], function (exports, _can, _canViewStacheStache, _geolocationStache, _viewmodel) {
-    'use strict';
-    var _interopRequire = function (obj) {
-        return obj && obj.__esModule ? obj['default'] : obj;
-    };
-    var can = _interopRequire(_can);
-    var template = _interopRequire(_geolocationStache);
-    var viewmodel = _interopRequire(_viewmodel);
-    can.Component.extend({
-        tag: 'bit-geolocation',
-        template: template,
-        scope: viewmodel,
-        events: {
-            inserted: function () {
-                var vm = this.viewModel, GeoModel = vm.attr('Geolocation');
-                GeoModel.findOne({}).then(function (loc) {
-                    vm.attr('location', loc);
-                    console.log(loc);
-                });
             }
         }
     });
@@ -23248,6 +22768,10 @@ define('components/city-list/city-list.stache!can@2.3.0-pre.1#view/stache/system
             'args': ['div']
         },
         {
+            'tokenType': 'special',
+            'args': ['#paginate']
+        },
+        {
             'tokenType': 'chars',
             'args': ['\n']
         },
@@ -23306,6 +22830,10 @@ define('components/city-list/city-list.stache!can@2.3.0-pre.1#view/stache/system
             'args': ['bit-pagination']
         },
         {
+            'tokenType': 'special',
+            'args': ['/paginate']
+        },
+        {
             'tokenType': 'chars',
             'args': ['\n']
         },
@@ -23347,8 +22875,18 @@ define('components/city-list/viewmodel', [
     var can = _interopRequire(_can);
     var Cities = _interopRequire(_modelsCityCity);
     module.exports = can.Map.extend({
-        define: { cities: { value: [] } },
-        Cities: Cities
+        define: {
+            cities: { value: [] },
+            paginate: {
+                value: true,
+                type: 'boolean'
+            }
+        },
+        Cities: Cities,
+        updateContext: function (hash) {
+            can.route.attr(hash);
+            return false;
+        }
     });
 });
 /*bit-grid@0.0.1#bit-search/bit-search.stache!can@2.3.0-pre.1#view/stache/system*/
@@ -27495,6 +27033,8 @@ define('bit-grid@0.0.1#bit-search/bit-search', [
     });
     module.exports = ViewModel;
 });
+/*can@2.3.0-pre.1#util/domless/domless*/
+System.set('can@2.3.0-pre.1#util/domless/domless', System.newModule({}));
 /*bit-grid@0.0.1#bit-pagination/bit-pagination.stache!can@2.3.0-pre.1#view/stache/system*/
 define('bit-grid@0.0.1#bit-pagination/bit-pagination.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
     return stache([
@@ -27624,6 +27164,8 @@ define('bit-grid@0.0.1#bit-pagination/bit-pagination.stache!can@2.3.0-pre.1#view
         }
     ]);
 });
+/*can@2.3.0-pre.1#util/array/makeArray*/
+System.set('can@2.3.0-pre.1#util/array/makeArray', System.newModule({}));
 /*bit-grid@0.0.1#bit-pagination/viewmodel*/
 define('bit-grid@0.0.1#bit-pagination/viewmodel', function (require, exports, module) {
     var can = require('can');
@@ -27726,6 +27268,577 @@ define('components/city-list/city-list', [
         }
     });
 });
+/*pages/home/home*/
+define('pages/home/home', [
+    'exports',
+    'can',
+    'can/view/stache/stache',
+    './home.stache!',
+    './viewmodel',
+    './home.less!',
+    'components/city-list/city-list'
+], function (exports, _can, _canViewStacheStache, _homeStache, _viewmodel, _homeLess, _componentsCityListCityList) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    var template = _interopRequire(_homeStache);
+    var viewmodel = _interopRequire(_viewmodel);
+    can.Component.extend({
+        tag: 'mp-home',
+        template: template,
+        scope: viewmodel
+    });
+});
+/*pages/cities/cities.stache!can@2.3.0-pre.1#view/stache/system*/
+define('pages/cities/cities.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
+    return stache([
+        {
+            'tokenType': 'start',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['col-md-10 col-md-offset-1 cities']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'h2',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'h2',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['Cities']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['h2']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['row']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n        ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'button',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['type']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['button']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['type']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['btn']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['can-click']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['toggleFilter']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['can-click']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'button',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['Near Me']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['button']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n        ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'button',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['type']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['button']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['type']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['btn']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['can-click']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['toggleFilter']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['can-click']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'button',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['Search']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['button']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['#showSearch']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n        ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'input',
+                true
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['type']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['text']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['type']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['placeholder']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['Search by city']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['placeholder']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['form-control']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['can-value']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['{params.city}']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['can-value']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'input',
+                true
+            ]
+        },
+        {
+            'tokenType': 'special',
+            'args': ['/showSearch']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['div']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'bit-geolocation',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'bit-geolocation',
+                false
+            ]
+        },
+        {
+            'tokenType': 'close',
+            'args': ['bit-geolocation']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'ma-city-list',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['params']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['{params}']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['params']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'ma-city-list',
+                false
+            ]
+        },
+        {
+            'tokenType': 'close',
+            'args': ['ma-city-list']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['div']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'done',
+            'args': []
+        }
+    ]);
+});
+/*pages/cities/cities.viewmodel*/
+define('pages/cities/cities.viewmodel', [
+    'exports',
+    'module',
+    'can',
+    'can/map/define/define'
+], function (exports, module, _can, _canMapDefineDefine) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    module.exports = can.Map.extend({
+        define: {
+            showSearch: {
+                value: false,
+                type: 'boolean'
+            },
+            params: {
+                value: {
+                    offset: 0,
+                    limit: 3
+                }
+            }
+        },
+        toggleFilter: function (ctx, $el) {
+            var val = $el.text();
+            if (val === 'Near Me') {
+                return;
+            }
+            if (val === 'Search') {
+                this.attr('showSearch', !this.attr('showSearch'));
+            }
+        }
+    });
+});
+/*components/geolocation/geolocation.stache!can@2.3.0-pre.1#view/stache/system*/
+define('components/geolocation/geolocation.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
+    return stache([{
+            'tokenType': 'done',
+            'args': []
+        }]);
+});
+/*utils/localStorage*/
+define('utils/localStorage', [
+    'exports',
+    'module',
+    'can'
+], function (exports, module, _can) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    module.exports = can.Construct.extend({ hasLocalStorage: false }, {
+        init: function () {
+            if (window.localStorage) {
+                this.hasLocalStorage = true;
+            }
+        },
+        attr: function () {
+            var keyName, val;
+            if (arguments.length > 0) {
+                keyName = arguments[0];
+                if (arguments.length === 2) {
+                    val = arguments[1];
+                    if (typeof arguments[1] !== 'string') {
+                        val = JSON.stringify(val);
+                    }
+                    return window.localStorage.setItem(keyName, val);
+                } else {
+                    return JSON.parse(window.localStorage.getItem(keyName));
+                }
+            }
+            return;
+        },
+        removeAttr: function (keyName) {
+            window.localStorage.removeItem(keyName);
+        },
+        length: function () {
+            window.localStorage.length;
+        },
+        key: function (keyName) {
+            window.localStorage.key(keyName) || -1;
+        },
+        clear: function () {
+            window.localStorage.clear();
+        }
+    });
+});
+/*models/geolocation/geolocation*/
+define('models/geolocation/geolocation', [
+    'exports',
+    'module',
+    'can',
+    'can/map/define/define',
+    'utils/localStorage'
+], function (exports, module, _can, _canMapDefineDefine, _utilsLocalStorage) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    var Storage = _interopRequire(_utilsLocalStorage);
+    var storage = Storage(), dpipApiKey = '0f5a6c8d64f29d3eda22820a9b52acdbcc315647', ipLocUrl = 'http://api.db-ip.com/addrinfo?&api_key=' + dpipApiKey + '&addr=';
+    module.exports = can.Model.extend({
+        findOne: function () {
+            var resp, ipDef, ipLocDef;
+            return can.Deferred(function (defer) {
+                if (!storage.key('ipLocation')) {
+                    ipDef = can.ajax({
+                        url: 'http://tools.endgamestudio.com/clientip.php',
+                        type: 'GET'
+                    });
+                    ipDef.then(function (ipData) {
+                        ipLocDef = can.ajax({
+                            url: ipLocUrl + ipData.ip,
+                            type: 'GET'
+                        });
+                        ipLocDef.then(function (locData) {
+                            resp = ipData;
+                            resp.location = locData;
+                            storage.attr('ipLocation', resp);
+                            defer.resolve(resp);
+                        });
+                    });
+                } else {
+                    resp = storage.attr('ipLocation');
+                    defer.resolve(resp);
+                }
+            });
+        }
+    }, {});
+});
+/*components/geolocation/viewmodel*/
+define('components/geolocation/viewmodel', [
+    'exports',
+    'module',
+    'can',
+    'can/map/define/define',
+    'models/geolocation/geolocation'
+], function (exports, module, _can, _canMapDefineDefine, _modelsGeolocationGeolocation) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    var Geolocation = _interopRequire(_modelsGeolocationGeolocation);
+    module.exports = can.Map.extend({
+        define: { location: { value: {} } },
+        Geolocation: Geolocation
+    });
+});
+/*components/geolocation/geolocation*/
+define('components/geolocation/geolocation', [
+    'exports',
+    'can',
+    'can/view/stache/stache',
+    './geolocation.stache!',
+    './viewmodel'
+], function (exports, _can, _canViewStacheStache, _geolocationStache, _viewmodel) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    var template = _interopRequire(_geolocationStache);
+    var viewmodel = _interopRequire(_viewmodel);
+    can.Component.extend({
+        tag: 'bit-geolocation',
+        template: template,
+        scope: viewmodel,
+        events: {
+            inserted: function () {
+                var vm = this.viewModel, GeoModel = vm.attr('Geolocation');
+                GeoModel.findOne({}).then(function (loc) {
+                    vm.attr('location', loc);
+                    console.log(loc);
+                });
+            }
+        }
+    });
+});
 /*pages/cities/cities*/
 define('pages/cities/cities', [
     'exports',
@@ -27756,6 +27869,96 @@ define('pages/city-detail/city-detail.stache!can@2.3.0-pre.1#view/stache/system'
         {
             'tokenType': 'start',
             'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['col-md-4']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['row']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n            ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['col-sm-10 col-sm-offset-1']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n            ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
                 'h2',
                 false
             ]
@@ -27777,7 +27980,7 @@ define('pages/city-detail/city-detail.stache!can@2.3.0-pre.1#view/stache/system'
         },
         {
             'tokenType': 'chars',
-            'args': ['\n\n']
+            'args': ['\n\n            ']
         },
         {
             'tokenType': 'start',
@@ -27817,8 +28020,8 @@ define('pages/city-detail/city-detail.stache!can@2.3.0-pre.1#view/stache/system'
             'args': ['src']
         },
         {
-            'tokenType': 'attrValue',
-            'args': ['#']
+            'tokenType': 'special',
+            'args': ['city.logoSrc']
         },
         {
             'tokenType': 'attrEnd',
@@ -27865,7 +28068,7 @@ define('pages/city-detail/city-detail.stache!can@2.3.0-pre.1#view/stache/system'
         },
         {
             'tokenType': 'chars',
-            'args': ['\n\n']
+            'args': ['\n\n            ']
         },
         {
             'tokenType': 'start',
@@ -27891,7 +28094,257 @@ define('pages/city-detail/city-detail.stache!can@2.3.0-pre.1#view/stache/system'
         },
         {
             'tokenType': 'chars',
+            'args': ['\n        ']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['div']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['div']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['row']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n        ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'ul',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['artwork-list']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'ul',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n            ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'h3',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'h3',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['Artwork List']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['h3']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['#artworks']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n            ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'li',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'li',
+                false
+            ]
+        },
+        {
+            'tokenType': 'special',
+            'args': ['title']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['li']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['/artworks']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n        ']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['ul']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['div']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['div']
+        },
+        {
+            'tokenType': 'chars',
             'args': ['\n\n']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['col-md-7 col-md-offset-1']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'ma-tabs',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['default-tab']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['artwork']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['default-tab']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'ma-tabs',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n        ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'ma-tab',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['title']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['Artwork']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['title']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'ma-tab',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n            ']
         },
         {
             'tokenType': 'start',
@@ -27916,68 +28369,160 @@ define('pages/city-detail/city-detail.stache!can@2.3.0-pre.1#view/stache/system'
             'args': ['h3']
         },
         {
-            'tokenType': 'special',
-            'args': ['#artworks']
-        },
-        {
             'tokenType': 'chars',
-            'args': ['\n    ']
+            'args': ['\n            ']
         },
         {
             'tokenType': 'start',
             'args': [
-                'h4',
+                'ma-art-list',
                 false
-            ]
-        },
-        {
-            'tokenType': 'end',
-            'args': [
-                'h4',
-                false
-            ]
-        },
-        {
-            'tokenType': 'special',
-            'args': ['title']
-        },
-        {
-            'tokenType': 'close',
-            'args': ['h4']
-        },
-        {
-            'tokenType': 'chars',
-            'args': ['\n    ']
-        },
-        {
-            'tokenType': 'start',
-            'args': [
-                'img',
-                true
             ]
         },
         {
             'tokenType': 'attrStart',
-            'args': ['src']
+            'args': ['params']
         },
         {
-            'tokenType': 'special',
-            'args': ['url']
+            'tokenType': 'attrValue',
+            'args': ['{artParams}']
         },
         {
             'tokenType': 'attrEnd',
-            'args': ['src']
+            'args': ['params']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['artworks']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['{artworks}']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['artworks']
         },
         {
             'tokenType': 'end',
             'args': [
-                'img',
-                true
+                'ma-art-list',
+                false
             ]
         },
         {
-            'tokenType': 'special',
-            'args': ['/artworks']
+            'tokenType': 'close',
+            'args': ['ma-art-list']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n        ']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['ma-tab']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n        ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'ma-tab',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['title']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['Map']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['title']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'ma-tab',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n            ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'h3',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'h3',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['Map']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['h3']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n            ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'ma-map',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'ma-map',
+                false
+            ]
+        },
+        {
+            'tokenType': 'close',
+            'args': ['ma-map']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n        ']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['ma-tab']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['ma-tabs']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['div']
         },
         {
             'tokenType': 'chars',
@@ -27989,46 +28534,26 @@ define('pages/city-detail/city-detail.stache!can@2.3.0-pre.1#view/stache/system'
         }
     ]);
 });
-/*models/artwork/artwork*/
-define('models/artwork/artwork', [
-    'exports',
-    'module',
-    'can',
-    'can/map/define/define'
-], function (exports, module, _can, _canMapDefineDefine) {
-    'use strict';
-    var _interopRequire = function (obj) {
-        return obj && obj.__esModule ? obj['default'] : obj;
-    };
-    var can = _interopRequire(_can);
-    module.exports = can.Model.extend({
-        findAll: 'GET /artworks',
-        findOne: 'GET /artworks/{id}'
-    }, {});
-});
 /*pages/city-detail/city-detail.viewmodel*/
 define('pages/city-detail/city-detail.viewmodel', [
     'exports',
     'module',
     'can',
     'can/map/define/define',
-    'models/city/city',
-    'models/artwork/artwork'
-], function (exports, module, _can, _canMapDefineDefine, _modelsCityCity, _modelsArtworkArtwork) {
+    'models/city/city'
+], function (exports, module, _can, _canMapDefineDefine, _modelsCityCity) {
     'use strict';
     var _interopRequire = function (obj) {
         return obj && obj.__esModule ? obj['default'] : obj;
     };
     var can = _interopRequire(_can);
     var City = _interopRequire(_modelsCityCity);
-    var Artwork = _interopRequire(_modelsArtworkArtwork);
     module.exports = can.Map.extend({
         define: {
-            artworks: { value: [] },
-            city: { Value: City }
+            city: { Value: City },
+            artParams: { value: {} }
         },
-        City: City,
-        Artwork: Artwork
+        City: City
     });
 });
 /*components/slide-show/slide-show.stache!can@2.3.0-pre.1#view/stache/system*/
@@ -28916,10 +29441,6 @@ define('components/slide-show/slide-show.stache!can@2.3.0-pre.1#view/stache/syst
         }
     ]);
 });
-/*can@2.3.0-pre.1#util/domless/domless*/
-System.set('can@2.3.0-pre.1#util/domless/domless', System.newModule({}));
-/*can@2.3.0-pre.1#util/array/makeArray*/
-System.set('can@2.3.0-pre.1#util/array/makeArray', System.newModule({}));
 /*components/slide-show/viewmodel*/
 define('components/slide-show/viewmodel', [
     'exports',
@@ -28961,6 +29482,270 @@ define('components/slide-show/slide-show', [
         }
     });
 });
+/*components/map/map.stache!can@2.3.0-pre.1#view/stache/system*/
+define('components/map/map.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
+    return stache([
+        {
+            'tokenType': 'start',
+            'args': [
+                'mark',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'mark',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['MAP']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['mark']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'done',
+            'args': []
+        }
+    ]);
+});
+/*components/map/viewmodel*/
+define('components/map/viewmodel', [
+    'exports',
+    'module',
+    'can',
+    'can/map/define/define'
+], function (exports, module, _can, _canMapDefineDefine) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    module.exports = can.Map.extend({ define: {} });
+});
+/*components/map/map*/
+define('components/map/map', [
+    'exports',
+    'can',
+    'can/view/stache/stache',
+    './map.stache!',
+    './viewmodel',
+    './map.less!'
+], function (exports, _can, _canViewStacheStache, _mapStache, _viewmodel, _mapLess) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    var template = _interopRequire(_mapStache);
+    var viewmodel = _interopRequire(_viewmodel);
+    can.Component.extend({
+        tag: 'ma-map',
+        template: template,
+        scope: viewmodel
+    });
+});
+/*components/art-list/art-list.stache!can@2.3.0-pre.1#view/stache/system*/
+define('components/art-list/art-list.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
+    return stache([
+        {
+            'tokenType': 'start',
+            'args': [
+                'bit-search',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['model']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['{Artwork}']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['model']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['results']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['{artworks}']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['results']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['search-query']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['{params}']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['search-query']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'bit-search',
+                false
+            ]
+        },
+        {
+            'tokenType': 'close',
+            'args': ['bit-search']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['#artworks']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'h4',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'h4',
+                false
+            ]
+        },
+        {
+            'tokenType': 'special',
+            'args': ['title']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['h4']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'img',
+                true
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['src']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['url']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['src']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'img',
+                true
+            ]
+        },
+        {
+            'tokenType': 'special',
+            'args': ['/artworks']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'done',
+            'args': []
+        }
+    ]);
+});
+/*models/artwork/artwork*/
+define('models/artwork/artwork', [
+    'exports',
+    'module',
+    'can',
+    'can/map/define/define'
+], function (exports, module, _can, _canMapDefineDefine) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    module.exports = can.Model.extend({
+        findAll: 'GET /artworks',
+        findOne: 'GET /artworks/{id}'
+    }, {});
+});
+/*components/art-list/viewmodel*/
+define('components/art-list/viewmodel', [
+    'exports',
+    'module',
+    'can',
+    'can/map/define/define',
+    'models/artwork/artwork'
+], function (exports, module, _can, _canMapDefineDefine, _modelsArtworkArtwork) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    var Artwork = _interopRequire(_modelsArtworkArtwork);
+    module.exports = can.Map.extend({
+        define: { artworks: { value: [] } },
+        Artwork: Artwork,
+        updateContext: function (hash) {
+            can.route.attr(hash);
+            return false;
+        }
+    });
+});
+/*components/art-list/art-list*/
+define('components/art-list/art-list', [
+    'exports',
+    'can',
+    'can/view/stache/stache',
+    './art-list.stache!',
+    './viewmodel',
+    './art-list.less!'
+], function (exports, _can, _canViewStacheStache, _artListStache, _viewmodel, _artListLess) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    var template = _interopRequire(_artListStache);
+    var viewmodel = _interopRequire(_viewmodel);
+    can.Component.extend({
+        tag: 'ma-art-list',
+        template: template,
+        scope: viewmodel
+    });
+});
 /*pages/city-detail/city-detail*/
 define('pages/city-detail/city-detail', [
     'exports',
@@ -28969,8 +29754,10 @@ define('pages/city-detail/city-detail', [
     './city-detail.stache!',
     './city-detail.viewmodel',
     './city-detail.less!',
-    'components/slide-show/slide-show'
-], function (exports, _can, _canViewStacheStache, _cityDetailStache, _cityDetailViewmodel, _cityDetailLess, _componentsSlideShowSlideShow) {
+    'components/slide-show/slide-show',
+    'components/map/map',
+    'components/art-list/art-list'
+], function (exports, _can, _canViewStacheStache, _cityDetailStache, _cityDetailViewmodel, _cityDetailLess, _componentsSlideShowSlideShow, _componentsMapMap, _componentsArtListArtList) {
     'use strict';
     var _interopRequire = function (obj) {
         return obj && obj.__esModule ? obj['default'] : obj;
@@ -28990,12 +29777,7 @@ define('pages/city-detail/city-detail', [
                     }, def = vm.City.findOne(params);
                 def.then(function (resp) {
                     vm.attr('city', resp);
-                });
-            },
-            '{viewModel} city': function () {
-                var vm = this.viewModel, params = {}, def = vm.Artwork.findAll(params);
-                def.then(function (resp) {
-                    vm.attr('artworks', resp);
+                    vm.attr('artParams').attr('cityId', resp.id);
                 });
             }
         }
