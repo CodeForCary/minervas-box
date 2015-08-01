@@ -7295,13 +7295,12 @@ ma-city-list .city:last-child {
 }
 ma-city-list .city .city-logo {
   position: absolute;
-  top: 25px;
+  top: 15px;
   left: 0;
-  max-width: 75px;
 }
 ma-city-list .city .city-name,
 ma-city-list .city .city-short-desc {
-  margin-left: 70px;
+  margin-left: 100px;
 }
 ma-city-list .pagination-item {
   display: inline-block;
@@ -7426,9 +7425,9 @@ ma-city-list .pagination-item.active .badge {
   background-color: #ffffff;
 }
 
-/*bit-grid@0.0.1#bit-search/bit-search.less!$less*/
+/*bit-data-suite@0.0.1#bit-search/bit-search.less!$less*/
 
-/*bit-grid@0.0.1#bit-pagination/bit-pagination.less!$less*/
+/*bit-data-suite@0.0.1#bit-pagination/bit-pagination.less!$less*/
 
 /*pages/cities/cities.less!$less*/
 
@@ -7440,3 +7439,13 @@ mp-city-detail .city-flag img {
 /*components/map/map.less!$less*/
 
 /*components/art-list/art-list.less!$less*/
+
+/*components/tabs/tabs.less!$less*/
+
+/*components/tabs/tab/tab.less!$less*/
+ma-tab .tab-pane {
+  display: none;
+}
+ma-tab .tab-pane.active {
+  display: block;
+}

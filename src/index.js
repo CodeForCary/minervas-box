@@ -5793,7 +5793,7 @@ if (typeof System !== "undefined") {
 /*[system-bundles-config]*/
 System.paths["bundles/*.css"] ="../../../../../../../minervas-box/*css";
 System.paths["bundles/*"] = "../../../../../../../minervas-box/*.js";
-System.bundles = {"bundles/src/index.css!":["src/index.less!$less","pages/home/home.less!$less","components/city-list/city-list.less!$less","bit-grid@0.0.1#bit-search/bit-search.less!$less","bit-grid@0.0.1#bit-pagination/bit-pagination.less!$less","pages/cities/cities.less!$less","pages/city-detail/city-detail.less!$less","components/map/map.less!$less","components/art-list/art-list.less!$less"]};
+System.bundles = {"bundles/src/index.css!":["src/index.less!$less","pages/home/home.less!$less","components/city-list/city-list.less!$less","bit-data-suite@0.0.1#bit-search/bit-search.less!$less","bit-data-suite@0.0.1#bit-pagination/bit-pagination.less!$less","pages/cities/cities.less!$less","pages/city-detail/city-detail.less!$less","components/map/map.less!$less","components/art-list/art-list.less!$less","components/tabs/tabs.less!$less","components/tabs/tab/tab.less!$less"]};
 /*npm-utils*/
 define('npm-utils', function (require, exports, module) {
     var npmModuleRegEx = /.+@.+\..+\..+#.+/;
@@ -6270,9 +6270,9 @@ define('package.json!npm', [
             'browser': {}
         },
         {
-            'name': 'bit-grid',
+            'name': 'bit-data-suite',
             'version': '0.0.1',
-            'fileUrl': 'file:/Users/jorozco/projects/codeforcary/artProject/work/node_modules/bit-grid/package.json',
+            'fileUrl': 'file:/Users/jorozco/projects/codeforcary/artProject/work/node_modules/bit-data-suite/package.json',
             'system': {
                 'npmIgnore': {
                     'testee': true,
@@ -22323,7 +22323,7 @@ define('pages/home/home.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/s
         },
         {
             'tokenType': 'chars',
-            'args': ['Map']
+            'args': ['Near Me']
         },
         {
             'tokenType': 'close',
@@ -22486,7 +22486,7 @@ define('components/city-list/city-list.stache!can@2.3.0-pre.1#view/stache/system
         },
         {
             'tokenType': 'special',
-            'args': ['^cities']
+            'args': ['^cities.length']
         },
         {
             'tokenType': 'attrValue',
@@ -22494,7 +22494,7 @@ define('components/city-list/city-list.stache!can@2.3.0-pre.1#view/stache/system
         },
         {
             'tokenType': 'special',
-            'args': ['/cities']
+            'args': ['/cities.length']
         },
         {
             'tokenType': 'attrEnd',
@@ -22632,7 +22632,7 @@ define('components/city-list/city-list.stache!can@2.3.0-pre.1#view/stache/system
         },
         {
             'tokenType': 'attrValue',
-            'args': ['city-logo']
+            'args': ['city-logo crop-width']
         },
         {
             'tokenType': 'attrEnd',
@@ -22889,8 +22889,8 @@ define('components/city-list/viewmodel', [
         }
     });
 });
-/*bit-grid@0.0.1#bit-search/bit-search.stache!can@2.3.0-pre.1#view/stache/system*/
-define('bit-grid@0.0.1#bit-search/bit-search.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
+/*bit-data-suite@0.0.1#bit-search/bit-search.stache!can@2.3.0-pre.1#view/stache/system*/
+define('bit-data-suite@0.0.1#bit-search/bit-search.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
     return stache([{
             'tokenType': 'done',
             'args': []
@@ -26966,8 +26966,8 @@ define('can@2.3.0-pre.1#list/promise/promise', ['can/list/list'], function (list
         };
     });
 });
-/*bit-grid@0.0.1#bit-search/viewmodel*/
-define('bit-grid@0.0.1#bit-search/viewmodel', [
+/*bit-data-suite@0.0.1#bit-search/viewmodel*/
+define('bit-data-suite@0.0.1#bit-search/viewmodel', [
     'exports',
     'module',
     'can',
@@ -26996,8 +26996,8 @@ define('bit-grid@0.0.1#bit-search/viewmodel', [
         }
     });
 });
-/*bit-grid@0.0.1#bit-search/bit-search*/
-define('bit-grid@0.0.1#bit-search/bit-search', [
+/*bit-data-suite@0.0.1#bit-search/bit-search*/
+define('bit-data-suite@0.0.1#bit-search/bit-search', [
     'exports',
     'module',
     'can',
@@ -27035,8 +27035,8 @@ define('bit-grid@0.0.1#bit-search/bit-search', [
 });
 /*can@2.3.0-pre.1#util/domless/domless*/
 System.set('can@2.3.0-pre.1#util/domless/domless', System.newModule({}));
-/*bit-grid@0.0.1#bit-pagination/bit-pagination.stache!can@2.3.0-pre.1#view/stache/system*/
-define('bit-grid@0.0.1#bit-pagination/bit-pagination.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
+/*bit-data-suite@0.0.1#bit-pagination/bit-pagination.stache!can@2.3.0-pre.1#view/stache/system*/
+define('bit-data-suite@0.0.1#bit-pagination/bit-pagination.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
     return stache([
         {
             'tokenType': 'start',
@@ -27166,8 +27166,8 @@ define('bit-grid@0.0.1#bit-pagination/bit-pagination.stache!can@2.3.0-pre.1#view
 });
 /*can@2.3.0-pre.1#util/array/makeArray*/
 System.set('can@2.3.0-pre.1#util/array/makeArray', System.newModule({}));
-/*bit-grid@0.0.1#bit-pagination/viewmodel*/
-define('bit-grid@0.0.1#bit-pagination/viewmodel', function (require, exports, module) {
+/*bit-data-suite@0.0.1#bit-pagination/viewmodel*/
+define('bit-data-suite@0.0.1#bit-pagination/viewmodel', function (require, exports, module) {
     var can = require('can');
     require('can/map/define/define');
     module.exports = can.Map.extend({
@@ -27209,8 +27209,8 @@ define('bit-grid@0.0.1#bit-pagination/viewmodel', function (require, exports, mo
         }
     });
 });
-/*bit-grid@0.0.1#bit-pagination/bit-pagination*/
-define('bit-grid@0.0.1#bit-pagination/bit-pagination', [
+/*bit-data-suite@0.0.1#bit-pagination/bit-pagination*/
+define('bit-data-suite@0.0.1#bit-pagination/bit-pagination', [
     'exports',
     'module',
     'can',
@@ -27245,9 +27245,9 @@ define('components/city-list/city-list', [
     './city-list.stache!',
     './viewmodel',
     './city-list.less!',
-    'bit-grid/bit-search/',
-    'bit-grid/bit-pagination/'
-], function (exports, _can, _canViewStacheStache, _cityListStache, _viewmodel, _cityListLess, _bitGridBitSearch, _bitGridBitPagination) {
+    'bit-data-suite/bit-search/',
+    'bit-data-suite/bit-pagination/'
+], function (exports, _can, _canViewStacheStache, _cityListStache, _viewmodel, _cityListLess, _bitDataSuiteBitSearch, _bitDataSuiteBitPagination) {
     'use strict';
     var _interopRequire = function (obj) {
         return obj && obj.__esModule ? obj['default'] : obj;
@@ -28325,7 +28325,7 @@ define('pages/city-detail/city-detail.stache!can@2.3.0-pre.1#view/stache/system'
         },
         {
             'tokenType': 'attrStart',
-            'args': ['title']
+            'args': ['tab-title']
         },
         {
             'tokenType': 'attrValue',
@@ -28333,7 +28333,7 @@ define('pages/city-detail/city-detail.stache!can@2.3.0-pre.1#view/stache/system'
         },
         {
             'tokenType': 'attrEnd',
-            'args': ['title']
+            'args': ['tab-title']
         },
         {
             'tokenType': 'end',
@@ -28435,7 +28435,7 @@ define('pages/city-detail/city-detail.stache!can@2.3.0-pre.1#view/stache/system'
         },
         {
             'tokenType': 'attrStart',
-            'args': ['title']
+            'args': ['tab-title']
         },
         {
             'tokenType': 'attrValue',
@@ -28443,7 +28443,7 @@ define('pages/city-detail/city-detail.stache!can@2.3.0-pre.1#view/stache/system'
         },
         {
             'tokenType': 'attrEnd',
-            'args': ['title']
+            'args': ['tab-title']
         },
         {
             'tokenType': 'end',
@@ -28551,7 +28551,8 @@ define('pages/city-detail/city-detail.viewmodel', [
     module.exports = can.Map.extend({
         define: {
             city: { Value: City },
-            artParams: { value: {} }
+            artParams: { value: {} },
+            artworks: { value: [] }
         },
         City: City
     });
@@ -29746,6 +29747,499 @@ define('components/art-list/art-list', [
         scope: viewmodel
     });
 });
+/*components/tabs/tabs.stache!can@2.3.0-pre.1#view/stache/system*/
+define('components/tabs/tabs.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
+    return stache([
+        {
+            'tokenType': 'start',
+            'args': [
+                'ul',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['nav nav-tabs']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['role']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['tablist']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['role']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'ul',
+                false
+            ]
+        },
+        {
+            'tokenType': 'special',
+            'args': ['#tabs']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'li',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['role']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['presentation']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['role']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['#active']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['active']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['/active']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'li',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n        ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'button',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['type']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['button']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['type']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['btn-tab']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['aria-controls']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['tabId']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['aria-controls']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['role']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['tab']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['role']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['data-toggle']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['tab']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['data-toggle']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['can-click']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['toggleTab']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['can-click']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'button',
+                false
+            ]
+        },
+        {
+            'tokenType': 'special',
+            'args': ['tabTitle']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['button']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['li']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['/tabs']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['ul']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n\n']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['tab-content']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'content',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'content',
+                false
+            ]
+        },
+        {
+            'tokenType': 'close',
+            'args': ['content']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['div']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'done',
+            'args': []
+        }
+    ]);
+});
+/*components/tabs/viewmodel*/
+define('components/tabs/viewmodel', [
+    'exports',
+    'module',
+    'can',
+    'can/map/define/define'
+], function (exports, module, _can, _canMapDefineDefine) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    module.exports = can.Map.extend({
+        define: {
+            tabs: { value: [] },
+            activeTab: { value: {} }
+        },
+        isActive: function (ctx) {
+            return ctx === this.attr('activeTab');
+        },
+        register: function (tabVM) {
+            this.attr('tabs').push(tabVM);
+        },
+        toggleTab: function (ctx) {
+            this.attr('activeTab', ctx);
+        }
+    });
+});
+/*components/tabs/tab/tab.stache!can@2.3.0-pre.1#view/stache/system*/
+define('components/tabs/tab/tab.stache!can@2.3.0-pre.1#view/stache/system', ['can/view/stache/stache'], function (stache) {
+    return stache([
+        {
+            'tokenType': 'start',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['role']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['tabpanel']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['role']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['tab-pane ']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['#isActive']
+        },
+        {
+            'tokenType': 'attrValue',
+            'args': ['active']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['/isActive']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['class']
+        },
+        {
+            'tokenType': 'attrStart',
+            'args': ['id']
+        },
+        {
+            'tokenType': 'special',
+            'args': ['tabId']
+        },
+        {
+            'tokenType': 'attrEnd',
+            'args': ['id']
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'div',
+                false
+            ]
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n    ']
+        },
+        {
+            'tokenType': 'start',
+            'args': [
+                'content',
+                false
+            ]
+        },
+        {
+            'tokenType': 'end',
+            'args': [
+                'content',
+                false
+            ]
+        },
+        {
+            'tokenType': 'close',
+            'args': ['content']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'close',
+            'args': ['div']
+        },
+        {
+            'tokenType': 'chars',
+            'args': ['\n']
+        },
+        {
+            'tokenType': 'done',
+            'args': []
+        }
+    ]);
+});
+/*components/tabs/tab/viewmodel*/
+define('components/tabs/tab/viewmodel', [
+    'exports',
+    'module',
+    'can',
+    'can/map/define/define'
+], function (exports, module, _can, _canMapDefineDefine) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    module.exports = can.Map.extend({
+        define: {
+            tabId: {
+                get: function () {
+                    return 'tab_' + can.underscore(this.attr('tabTitle')).toLowerCase();
+                }
+            }
+        }
+    });
+});
+/*components/tabs/tab/tab*/
+define('components/tabs/tab/tab', [
+    'exports',
+    'can',
+    'can/view/stache/stache',
+    './tab.stache!',
+    './viewmodel',
+    './tab.less!'
+], function (exports, _can, _canViewStacheStache, _tabStache, _viewmodel, _tabLess) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    var template = _interopRequire(_tabStache);
+    var viewmodel = _interopRequire(_viewmodel);
+    can.Component.extend({
+        tag: 'ma-tab',
+        template: template,
+        scope: viewmodel,
+        events: {
+            inserted: function () {
+                var tabsVM = can.viewModel(this.element.parents('ma-tabs'));
+                tabsVM.register(this.viewModel);
+            }
+        }
+    });
+});
+/*components/tabs/tabs*/
+define('components/tabs/tabs', [
+    'exports',
+    'can',
+    'can/view/stache/stache',
+    './tabs.stache!',
+    './viewmodel',
+    './tabs.less!',
+    './tab/tab'
+], function (exports, _can, _canViewStacheStache, _tabsStache, _viewmodel, _tabsLess, _tabTab) {
+    'use strict';
+    var _interopRequire = function (obj) {
+        return obj && obj.__esModule ? obj['default'] : obj;
+    };
+    var can = _interopRequire(_can);
+    var template = _interopRequire(_tabsStache);
+    var viewmodel = _interopRequire(_viewmodel);
+    can.Component.extend({
+        tag: 'ma-tabs',
+        template: template,
+        scope: viewmodel,
+        events: {
+            inserted: function () {
+            }
+        }
+    });
+});
 /*pages/city-detail/city-detail*/
 define('pages/city-detail/city-detail', [
     'exports',
@@ -29756,8 +30250,9 @@ define('pages/city-detail/city-detail', [
     './city-detail.less!',
     'components/slide-show/slide-show',
     'components/map/map',
-    'components/art-list/art-list'
-], function (exports, _can, _canViewStacheStache, _cityDetailStache, _cityDetailViewmodel, _cityDetailLess, _componentsSlideShowSlideShow, _componentsMapMap, _componentsArtListArtList) {
+    'components/art-list/art-list',
+    'components/tabs/tabs'
+], function (exports, _can, _canViewStacheStache, _cityDetailStache, _cityDetailViewmodel, _cityDetailLess, _componentsSlideShowSlideShow, _componentsMapMap, _componentsArtListArtList, _componentsTabsTabs) {
     'use strict';
     var _interopRequire = function (obj) {
         return obj && obj.__esModule ? obj['default'] : obj;
