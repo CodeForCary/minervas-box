@@ -1,12 +1,12 @@
 <ul class="nav nav-tabs" role="tablist">
     {{#tabs}}
-    <li role="presentation" class="{{#active}}active{{/active}}">
+    <li role="presentation" class="{{#isActive}}active{{/isActive}}">
         <button type="button"
             class="btn-tab"
             aria-controls="{{tabId}}"
             role="tab"
             data-toggle="tab"
-            can-click="toggleTab">{{tabTitle}}</button>
+            can-click="toggleTab">{{itemTitle}}</button>
     </li>
     {{/tabs}}
 </ul>

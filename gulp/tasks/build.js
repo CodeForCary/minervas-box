@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     del = require('del'),
     rename = require('gulp-rename'),
     replace = require('gulp-replace'),
-    config = require('../../config.js').build;
+    config = require('../config.js').build;
 
 gulp.task('clear_build', function () {
     del(['dist','_dist']);

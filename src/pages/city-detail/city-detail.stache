@@ -1,16 +1,15 @@
+{{! Gets artwork list}}
+<bit-search model="{Artwork}" results="{artworks}" search-query="{artParams}"></bit-search>
 <div class="col-md-4">
     <div class="row">
-            <div class="col-sm-10 col-sm-offset-1">
-            <h2>{{city.cityName}}</h2>
-
-            <p class="pull-right city-flag"><img src="{{city.logoSrc}}" class="img-rounded" alt="{{city.cityName}} flag"></p>
-
-            <p>{{city.shortDescription}}</p>
+        <div class="col-sm-10 col-sm-offset-1">
+            <ma-city-details city="{city}"></ma-city-details>
         </div>
     </div>
     <div class="row">
         <ul class="artwork-list">
             <h3>Artwork List</h3>
+            {{! TODO Will need to paginate this}}
             {{#artworks}}
             <li>{{title}}</li>
             {{/artworks}}
@@ -19,12 +18,12 @@
 </div>
 
 <div class="col-md-7 col-md-offset-1">
-    <ma-tabs default-tab="artwork">
-        <ma-tab tab-title="Artwork">
+    <ma-tabs default-item="Artwork">
+        <ma-tab item-title="Artwork">
             <h3>Artwork</h3>
-            <ma-art-list params="{artParams}" artworks="{artworks}"></ma-art-list>
+            <ma-art-list artworks="{artworks}"></ma-art-list>
         </ma-tab>
-        <ma-tab tab-title="Map">
+        <ma-tab item-title="Map" disabled="true">
             <h3>Map</h3>
             <ma-map></ma-map>
         </ma-tab>

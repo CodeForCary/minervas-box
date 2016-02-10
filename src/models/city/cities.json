@@ -5,7 +5,14 @@
         "stateKey": "nc",
         "cityName": "Cary",
         "logoSrc":"https://upload.wikimedia.org/wikipedia/en/4/40/Flag_of_Cary%2C_North_Carolina.png",
-        "shortDescription": "Cary is located southeast of Raleigh."
+        "shortDescription": "Cary is located southeast of Raleigh.",
+        "meta": [
+            {
+                "key": "founded-date",
+                "label": "Founded",
+                "value": "1750"
+            }
+        ]
     },
     {
         "id":2,
@@ -28,7 +35,7 @@
         "cityKey": "chapel-hill",
         "stateKey": "nc",
         "cityName": "Chapel Hill",
-        "logoSrc":"http://placekitten.com/g/50/50",
+        "logoSrc":"https://upload.wikimedia.org/wikipedia/en/2/2c/Chapel-hill-town-flag.png",
         "shortDescription": "Chapel Hill is south of Durham."
     },
     {
@@ -44,7 +51,7 @@
         "cityKey": "san-francisco",
         "stateKey": "ca",
         "cityName": "San Francisco",
-        "logoSrc":"http://placekitten.com/g/50/50",
+        "logoSrc":"https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_San_Francisco.svg",
         "shortDescription": "San Francisco is on the west coast."
     },
     {
@@ -57,10 +64,10 @@
     },
     {
         "id":8,
-        "cityKey": "portlan",
+        "cityKey": "portland",
         "stateKey": "or",
         "cityName": "Portland",
-        "logoSrc":"http://placekitten.com/g/50/50",
+        "logoSrc":"https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Portland%2C_Oregon.svg",
         "shortDescription": "Portland is on the northwest coast."
     }
 ]

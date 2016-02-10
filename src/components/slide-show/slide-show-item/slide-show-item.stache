@@ -1,0 +1,11 @@
+{{#item}}
+<div class="slide-show-item item{{#isActive}} active{{/isActive}}">
+    {{#image}}
+    <img class="slide-show-image" src="{{url}}" alt="{{alt}}">
+    {{/image}}
+    <div class="carousel-caption">
+    <p>{{description}}</p>
+    <p><content></content></p>
+    </div>
+</div>
+{{/item}}

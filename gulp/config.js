@@ -15,8 +15,5 @@ module.exports = {
             build: opts.root
         }
 
-    },
-    jshint: {
-        src: opts.src + '/**/*.js'
     }
 }
