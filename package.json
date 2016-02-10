@@ -34,9 +34,6 @@
   "system": {
     "ignoreBrowser": true,
     "paths": {
-      "jquery": "node_modules/jquery/dist/jquery.js",
-      "can": "node_modules/can/can.js",
-      "can/*": "node_modules/can/*.js",
       "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js",
       "bootstrap/*": "./node_modules/bootstrap/js/*.js",
       "components/*": "./src/components/*.js",
