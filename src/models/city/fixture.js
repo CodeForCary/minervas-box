@@ -1,19 +1,41 @@
 import can from 'can';
-import 'can/util/fixture';
+import 'can/util/fixture/fixture';
+import cities from './cities.json';
+var cityList = new can.List(cities);
 
-var cityList = [
-    {id:1, cityCode: 'nc/cary', cityName: 'Cary', logoSrc:'http://placekitten.com/g/50/50', shortDescription: 'Cary is located southeast of Raleigh.'},
-    {id:2, cityCode: 'nc/raleigh', cityName: 'Raleigh', logoSrc:'http://placekitten.com/g/50/50', shortDescription: 'Raleigh is east of Durham.'},
-    {id:3, cityCode: 'nc/durham', cityName: 'Durham', logoSrc:'http://placekitten.com/g/50/50', shortDescription: 'Durham is north of Cary.'}
-];
+can.fixture('GET /cities', function(req) {
+    var resp = cityList,
+        params = req.data,
+        limit = params.limit || 5,
+        count = 0;
 
-can.fixture('GET /city.json', function() {
-    return cityList;
+    if (params.city) {
+        resp = resp.filter(function (item) {
+            return item.attr('cityName').toLowerCase().indexOf(params.city.toLowerCase()) > -1;
+        });
+    }
+
+    // if (params.coords) {
+    //
+    // }
+
+    count = resp.length;
+
+    if (params.offset) {
+        resp = resp.slice(params.offset);
+    }
+
+    if (params.limit) {
+        resp = resp.slice(0, params.limit);
+    }
+
+    return {data: resp.attr(), count: count};
 });
 
-can.fixture('GET /city/{id}.json', function(req) {
+can.fixture('GET /cities/{state}/{city}', function(req) {
     var filtered = cityList.filter(function (item) {
-        return item.id === req.data.id;
+        return item.stateKey === req.data.state && item.cityKey === req.data.city;
     });
-    return filtered;
+    var resp = filtered.length > 0 ? filtered[0] : {};
+    return resp;
 });

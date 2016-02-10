@@ -1,0 +1,12 @@
+<h2>{{city.cityName}}</h2>
+
+<p class="pull-right city-flag"><img src="{{city.logoSrc}}" class="img-rounded" alt="{{city.cityName}} flag"></p>
+
+<p>{{city.shortDescription}}</p>
+
+{{#city.meta}}
+<dl class="city-meta {{#if key}}meta-{{key}}{{/if}}">
+    <dt>{{label}}</dt>
+    <dd>{{value}}</dd>
+</dl>
+{{/city.meta}}

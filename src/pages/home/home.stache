@@ -1,16 +1,21 @@
-<div class="container">
-    
-    
-    <ma-map></ma-map>
+<div class="col-md-10 col-md-offset-1">
     <div class="row">
-        <ma-artwork></ma-artwork>
-        
         <h3>About</h3>
         <p>Minerva, a sponsor for the arts, presents to you... your artwork.</p>
     </div>
-    
+
     <div class="row">
-        <h3>Cities</h3>
-        <ma-cities-list filter="" list-style="simple"></ma-cities-list>
+        <ma-artwork></ma-artwork>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Cities</h3>
+            <ma-city-list paginate="false" params="{params}"></ma-city-list>
+        </div>
+        <div class="col-md-6 col-md-offset-1">
+            <h3>Near Me</h3>
+            <ma-map></ma-map>
+        </div>
     </div>
 </div>

@@ -1,0 +1,8 @@
+<ma-slide-show carousel-id="artworks" default-item="{defaultItem}">
+    {{#artworks}}
+    <ma-slide-show-item item-id="artwork_{{id}}" slide-index="{{@index}}" item-title="{title}" item="{.}">
+        <button type="button" class="btn btn-default">View Artwork's details</button>
+        <button type="button" class="btn btn-default">Map Me to this piece</button>
+    </ma-slide-show-item>
+    {{/artworks}}
+</ma-slide-show>
