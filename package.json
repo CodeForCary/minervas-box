@@ -46,9 +46,10 @@
       "can/*": "node_modules/can/*.js",
       "bootstrap": "node_modules/bootstrap/dist/js/bootstrap.js",
       "bootstrap/*": "node_modules/bootstrap/js/*.js",
-      "components/*": "src/components/*.js",
-      "models/*": "src/models/*.js",
-      "pages/*": "src/pages/*.js"
+      "components/*": "./src/components/*.js",
+      "models/*": "./src/models/*.js",
+      "pages/*": "./src/pages/*.js",
+      "utils/*": "./src/utils/*.js"
     },
     "npmIgnore": [
       "documentjs"
