@@ -1,0 +1,36 @@
+@import '../../../node_modules/bootstrap/less/variables.less';
+@import '../../../node_modules/bootstrap/less/mixins/opacity.less';
+@import '../../../node_modules/bootstrap/less/mixins/tab-focus.less';
+@import '../../../node_modules/bootstrap/less/mixins/vendor-prefixes.less';
+@import '../../../node_modules/bootstrap/less/mixins/buttons.less';
+@import '../../../node_modules/bootstrap/less/buttons.less';
+
+ma-city-list {
+    .city {
+        padding: 0 1rem;
+        position: relative;
+        border-bottom: 1px solid #dddddd;
+        text-align:left;
+        &:last-child{
+            border-bottom: none;
+
+        }
+
+        .city-logo {
+            position: absolute;
+            top:15px;
+            left: 0;
+        }
+
+        .city-name, .city-short-desc {
+            margin-left: 100px;
+        }
+    }
+    .pagination-item {
+        .btn();
+
+        &.active {
+            .btn-primary();
+        }
+    }
+}

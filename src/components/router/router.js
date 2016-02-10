@@ -14,15 +14,20 @@ can.Component.extend({
                 routePath = scope.attr('routePath'),
                 routeTarget = scope.attr('routeTarget'),
                 defs = {};
-            
-            //path is same as target when path not explicitly passed
-            if (typeof routePath === 'undefined') {
-                routePath = routeTarget;
-                scope.attr('routePath', routePath);
+
+            if (routeKey) {
+                var routeKeys = routeKey ? routeKey.split('||') : [];
+                var routeTargets = routeTarget ? routeTarget.split('||'): [];
+                can.each(routeKeys, function (item, index) {
+                    defs[item] = routeTargets[index] || null;
+                })
+                //path is same as target when path not explicitly passed
+                // if (typeof routePath === 'undefined') {
+                //     routePath = routeTargets[0];
+                //     scope.attr('routePath', routePath);
+                // }
             }
-            
             //set up route
-            defs[routeKey] = routeTarget;
             can.route(routePath, defs);
         }
     }

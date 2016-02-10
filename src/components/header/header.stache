@@ -5,12 +5,14 @@
         Minerva's Box
       </a>
     </div>
-    
+
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
             <li><a href="{{getPageUrl 'cities'}}">Cities</a></li>
-            <li><a href="{{getPageUrl 'near-me'}}">Near Me</a></li>
+            <li><a href="{{getPageUrl 'artwork'}}">Artwork</a></li>
+            <li><a href="{{getPageUrl 'artists'}}">Artists</a></li>
+            <li><a href="{{getPageUrl 'collections'}}">Collections</a></li>
         </ul>
     </div>
   </div>
