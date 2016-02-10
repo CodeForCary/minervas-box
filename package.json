@@ -34,7 +34,7 @@
   "system": {
     "ignoreBrowser": true,
     "paths": {
-      "jquery": "bower_components/jquery/dist/jquery.js",
+      "jquery": "node_modules/jquery/dist/jquery.js",
       "can": "node_modules/can/can.js",
       "can/*": "node_modules/can/*.js",
       "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js",

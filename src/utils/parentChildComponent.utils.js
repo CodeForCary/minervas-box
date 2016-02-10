@@ -40,7 +40,8 @@ const Parent = can.Map.extend({
         }
     },
     isActive: function (ctx) {
-        return ctx === this.attr('activeItem.item');
+        //TODO Somewhere, we are storing the wrong thing for this to work
+        return ctx === this.attr('activeItem') || ctx === this.attr('activeItem.item');
     },
     register: function (childVM) {
         this.attr('items').push(childVM);
