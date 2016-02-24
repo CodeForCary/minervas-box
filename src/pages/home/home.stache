@@ -15,7 +15,14 @@
         </div>
         <div class="col-md-6 col-md-offset-1">
             <h3>Near Me</h3>
-            <ma-map></ma-map>
+            <bit-geolocation geo="{geo}"></bit-geolocation>
+            {{#is geo.coords.state 'pending'}}
+                Getting coordinates...
+            {{/if}}
+            {{#if geo.coords.latitude}}
+                <bit-leaflet-map></bit-leaflet-map>
+            {{/if}}
+
         </div>
     </div>
 </div>

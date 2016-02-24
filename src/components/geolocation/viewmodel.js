@@ -4,7 +4,7 @@ import Geolocation from 'models/geolocation/geolocation';
 
 export default can.Map.extend({
     define: {
-      location: {
+      geo: {
         value: {}
       }
     },
