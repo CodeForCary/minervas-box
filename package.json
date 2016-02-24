@@ -27,9 +27,11 @@
     "bootstrap": "^3.3.6",
     "can": "^2.3.15",
     "jquery": "^2.2.0",
+    "leaflet": "^0.7.7",
     "lodash": "^4.3.0",
-    "steal": "^0.14.0-pre.3",
-    "steal-tools": "^0.14.0-pre.3"
+    "promise": "^7.1.1",
+    "steal": "^0.14.0",
+    "steal-tools": "^0.14.0"
   },
   "system": {
     "ignoreBrowser": true,
