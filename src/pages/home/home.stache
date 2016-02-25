@@ -15,12 +15,21 @@
         </div>
         <div class="col-md-6 col-md-offset-1">
             <h3>Near Me</h3>
-            <bit-geolocation geo="{geo}"></bit-geolocation>
+            {{#if askGeoPermission}}
+                Can we use your location?
+                <button class="btn btn-default" type="button" can-click="showMap">Yep!</button>
+                <button class="btn btn-default" type="button" can-click="showCitySearch">No, thanks.</button>
+            {{/if}}
+            {{#if citySearch}}
+                CITY SEARCH
+            {{/is}}
             {{#is geo.coords.state 'pending'}}
-                Getting coordinates...
+                <span class="loading">Getting coordinates...</span>
             {{/if}}
             {{#if geo.coords.latitude}}
-                <bit-leaflet-map></bit-leaflet-map>
+                <bit-leaflet-map geo="{geo}" map="{map}">
+                    <bit-map-marker map="{map}" coords="{geo.coords}" content="You Are Here!"></bit-map-marker>
+                </bit-leaflet-map>
             {{/if}}
 
         </div>

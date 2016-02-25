@@ -23,9 +23,24 @@
             <h3>Artwork</h3>
             <ma-art-list artworks="{artworks}"></ma-art-list>
         </ma-tab>
-        <ma-tab item-title="Map" disabled="true">
+        <ma-tab item-title="Map" disabled="{mapDisabled}">
             <h3>Map</h3>
-            <ma-map></ma-map>
+            {{#if askGeoPermission}}
+                Can we use your location?
+                <button class="btn btn-default" type="button" can-click="showMap">Yep!</button>
+                <button class="btn btn-default" type="button" can-click="showCitySearch">No, thanks.</button>
+            {{/if}}
+            {{#if citySearch}}
+                CITY SEARCH
+            {{/is}}
+            {{#is geo.coords.state 'pending'}}
+                <span class="loading">Getting coordinates...</span>
+            {{/if}}
+            {{#if geo.coords.latitude}}
+                <bit-leaflet-map geo="{geo}" map="{map}">
+                    <bit-map-marker map="{map}" coords="{geo.coords}" content="You Are Here!"></bit-map-marker>
+                </bit-leaflet-map>
+            {{/if}}
         </ma-tab>
     </ma-tabs>
 </div>

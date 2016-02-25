@@ -1,7 +1,7 @@
 <ma-header></ma-header>
 
 <ma-router route-path="" route-key="page" route-target="home">
-    <mp-home></mp-home>
+    <mp-home state="{state}"></mp-home>
 </ma-router>
 
 <ma-router route-path="cities" route-key="page" route-target="cities">
@@ -21,7 +21,12 @@
 </ma-router>
 
 <ma-router route-path=":state/:city" route-key="page" route-target="cities">
-    <mp-city-detail></mp-city-detail>
+    <mp-city-detail state="{state}"></mp-city-detail>
 </ma-router>
 
 <ma-footer></ma-footer>
+
+{{! Helper components, no content output from these components}}
+{{#if state.toggles.useGeo}}
+<bit-geolocation geo="{geo}"></bit-geolocation>
+{{/if}}

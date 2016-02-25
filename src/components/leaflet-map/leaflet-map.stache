@@ -1,1 +1,4 @@
-<mark>MAP</mark>
+<div id="{{mapId}}" class="leaflet-map"></div>
+{{#if map}}
+    <content />
+{{/if}}

@@ -4,7 +4,7 @@ import template from './city-detail.stache!';
 import viewmodel from './city-detail.viewmodel';
 import './city-detail.less!';
 
-import 'components/map/map';
+import 'components/leaflet-map/leaflet-map';
 import 'components/art-list/art-list';
 import 'components/tabs/tabs';
 import 'bit-data-suite/bit-search/';
