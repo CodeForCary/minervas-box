@@ -21,7 +21,7 @@
     "gulp-replace": "^0.5.3",
     "gulp-util": "^3.0.4",
     "require-dir": "^0.1.0",
-    "xo": "^0.12.1"
+    "xo": "^0.16.0"
   },
   "dependencies": {
     "bit-data-suite": "git+https://github.com/bitovi-components/bit-data-suite.git#master",
@@ -58,16 +58,24 @@
       "no-lonely-if": 0,
       "no-else-return": 0,
       "spaced-comment": 0,
-      "no-warning-comments": 0
+      "no-warning-comments": 0,
+      "import/no-extraneous-dependencies": 0
     },
     "globals": [
-      "steal"
+      "steal",
+      "chai"
     ],
     "ignore": [
       "node_modules/**",
       "dist/**",
       "_dist/**",
       "docs/**"
+    ],
+    "overrides": [
+      {
+        "files": "src/**",
+        "esnext": true
+      }
     ]
   }
 }
