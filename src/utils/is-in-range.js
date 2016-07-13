@@ -1,23 +1,23 @@
 import can from 'can';
 
-var defaults = {
+const defaults = {
     includeLow: false,
     includeHigh: false
 };
 
-const inRange = function (low, high, value, opts) {
-    var options = can.extend(defaults, opts);
-    var resp;
+const inRange = (low, high, value, opts) => {
+    const options = can.extend(defaults, opts);
+    let resp;
 
     if (options.includeLow) {
-        low = low - 1;
+        low -= 1;
     }
 
     if (options.includeHigh) {
-        high = high + 1;
+        high += 1;
     }
 
-    if (value > low && value < high ) {
+    if (value > low && value < high) {
         resp = 'IN_RANGE';
     }
 
@@ -30,16 +30,15 @@ const inRange = function (low, high, value, opts) {
     }
 
     return resp;
-}
+};
 
-
-const inRangeArray = function (arr, value) {
-    var arrayOpts = {
+const inRangeArray = (arr, value) => {
+    const arrayOpts = {
         includeLow: true,
         includeHigh: true
     };
     return inRange(0, arr.length - 1, value, arrayOpts);
-}
+};
 
 export {inRange};
 export {inRangeArray};
