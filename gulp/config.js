@@ -1,4 +1,4 @@
-var opts = {
+const opts = {
     build: 'dist',
     src: './src',
     root: './'
@@ -6,6 +6,9 @@ var opts = {
 
 module.exports = {
     build: {
+        src: opts.src,
+        destination: opts.build,
+        bundles: '_dist'
     },
     server: {
         prod: {
@@ -16,4 +19,4 @@ module.exports = {
         }
 
     }
-}
+};
