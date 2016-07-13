@@ -9,18 +9,18 @@ export default can.Map.extend({
             type: '*'
         }
     },
-    addPopup: function () {
-        var vm = this;
-        var map = vm.attr('map');
-        var coords = vm.attr('coords');
-        var content = vm.attr('content');
+    addPopup: () => {
+        const vm = this;
+        const map = vm.attr('map');
+        const coords = vm.attr('coords');
+        const content = vm.attr('content');
 
-        var opts = [];
+        const opts = [];
         opts.push(coords.attr('latitude'));
         opts.push(coords.attr('longitude'));
 
         // Add popup
-        var popup = L.popup()
+        const popup = L.popup()
             .setLatLng(opts)
             .setContent(content)
             .openOn(map);

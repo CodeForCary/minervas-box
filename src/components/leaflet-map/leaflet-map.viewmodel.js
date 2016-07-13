@@ -1,11 +1,12 @@
 import can from 'can';
 import 'can/map/define/define';
 import uid from 'utils/uid';
+import L from 'leaflet';
 
 export default can.Map.extend({
     define: {
         mapId: {
-            value: 'map_' + uid(),
+            value: `map_${uid()}`,
             type: 'string'
         },
         geo: {
@@ -20,14 +21,14 @@ export default can.Map.extend({
             type: 'number'
         }
     },
-    initMap: function () {
-        var vm = this;
-        var coords = vm.attr('geo.coords');
-        var opts = [];
+    initMap: () => {
+        const vm = this;
+        const coords = vm.attr('geo.coords');
+        const opts = [];
         opts.push(coords.attr('latitude'));
         opts.push(coords.attr('longitude'));
 
-        var map = L.map(vm.attr('mapId'))
+        const map = L.map(vm.attr('mapId'))
             .setView(opts, vm.attr('minZoom'));
 
         // Add tiles to map

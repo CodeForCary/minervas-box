@@ -9,20 +9,20 @@ export default can.Map.extend({
             type: '*'
         }
     },
-    addMarker: function () {
-        var vm = this;
-        var map = vm.attr('map');
-        var coords = vm.attr('coords');
-        var content = vm.attr('content');
+    addMarker: () => {
+        const vm = this;
+        const map = vm.attr('map');
+        const coords = vm.attr('coords');
+        const content = vm.attr('content');
 
-        var opts = [];
+        const opts = [];
         opts.push(coords.attr('latitude'));
         opts.push(coords.attr('longitude'));
 
         // TODO Can Steal do this?
         L.Icon.Default.imagePath = 'node_modules/leaflet/dist/images';
 
-        var marker = L.marker(opts).addTo(map);
+        const marker = L.marker(opts).addTo(map);
         if (content) {
             marker
                 .bindPopup(content)
