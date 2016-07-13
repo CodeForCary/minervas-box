@@ -8,7 +8,7 @@ export default can.Map.extend({
             value: 'FORM'
         }
     },
-    updateState: function (newState) {
+    updateState: (newState) => {
         this.attr('formState', newState);
     }
 });
