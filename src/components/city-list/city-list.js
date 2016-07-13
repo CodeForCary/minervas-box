@@ -6,6 +6,7 @@ import './city-list.less!';
 
 import 'bit-data-suite/bit-search/';
 import 'bit-data-suite/bit-pagination/';
+import 'components/flag-image/';
 
 can.Component.extend({
     tag: 'ma-city-list',

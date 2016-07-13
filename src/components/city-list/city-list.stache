@@ -3,7 +3,7 @@
     {{#cities}}
     <a href="#" class="btn city" can-click="updateContext city=cityKey state=stateKey">
         <h3 class="city-name">{{cityName}}</h3>
-        <img src="{{logoSrc}}" class="city-logo crop-width">
+        <ma-flag-image flag-src="{{logoSrc}}"></ma-flag-image>
         <p class="city-short-desc">{{shortDescription}}</p>
     </a>
     {{/cities}}

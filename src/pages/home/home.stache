@@ -15,23 +15,25 @@
         </div>
         <div class="col-md-6 col-md-offset-1">
             <h3>Near Me</h3>
-            {{#if askGeoPermission}}
-                Can we use your location?
-                <button class="btn btn-default" type="button" can-click="showMap">Yep!</button>
-                <button class="btn btn-default" type="button" can-click="showCitySearch">No, thanks.</button>
-            {{/if}}
-            {{#if citySearch}}
+            <ma-ask-permission
+                question="Can we use your location?"
+                state="{state}"
+                {^form-state}="formState"
+            ></ma-ask-permission>
+            {{#is formState 'GRANTED'}}
+                <bit-geolocation geo="{state.geo}"></bit-geolocation>
+                {{#is state.geo.coords.state 'pending'}}
+                    <span class="loading">Getting coordinates...</span>
+                {{/if}}
+                {{#if state.geo.coords.latitude}}
+                    <bit-leaflet-map geo="{state.geo}" map="{map}">
+                        <bit-map-marker map="{map}" coords="{state.geo.coords}" content="You Are Here!"></bit-map-marker>
+                    </bit-leaflet-map>
+                {{/if}}
+            {{/is}}
+            {{#is formState 'DENIED'}}
                 CITY SEARCH
             {{/is}}
-            {{#is geo.coords.state 'pending'}}
-                <span class="loading">Getting coordinates...</span>
-            {{/if}}
-            {{#if geo.coords.latitude}}
-                <bit-leaflet-map geo="{geo}" map="{map}">
-                    <bit-map-marker map="{map}" coords="{geo.coords}" content="You Are Here!"></bit-map-marker>
-                </bit-leaflet-map>
-            {{/if}}
-
         </div>
     </div>
 </div>

@@ -11,7 +11,7 @@
             <h3>Artwork List</h3>
             {{! TODO Will need to paginate this}}
             {{#artworks}}
-            <li>{{title}}</li>
+                <li>{{title}}</li>
             {{/artworks}}
         </ul>
     </div>
