@@ -1,17 +1,7 @@
-
-{{#if askForPermission}}
+{{#is formState 'FORM'}}
     {{question}}
-    <button class="btn btn-default" type="button" can-click="granted">Yep!</button>
-    <button class="btn btn-default" type="button" can-click="denied">No, thanks.</button>
-{{/if}}
-{{#if citySearch}}
-    CITY SEARCH
+    <button class="btn btn-primary" type="button" ($click)="updateState('GRANTED')">Yep!</button>
+    <button class="btn btn-default" type="button" ($click)="updateState('DENIED')">No, thanks.</button>
+{{else}}
+    <content />
 {{/is}}
-{{#is geo.coords.state 'pending'}}
-    <span class="loading">Getting coordinates...</span>
-{{/if}}
-{{#if geo.coords.latitude}}
-    <bit-leaflet-map geo="{geo}" map="{map}">
-        <bit-map-marker map="{map}" coords="{geo.coords}" content="You Are Here!"></bit-map-marker>
-    </bit-leaflet-map>
-{{/if}}
