@@ -1,18 +1,22 @@
 import can from 'can';
 import 'can/view/stache/stache';
 import template from './tab.stache!';
-import viewmodel from './viewmodel';
+import ViewModel from './viewmodel';
 import './tab.less!';
 
 can.Component.extend({
     tag: 'ma-tab',
-    template: template,
-    scope: viewmodel,
+    template,
+    viewModel: ViewModel,
     events: {
-        inserted: function () {
+        inserted: () => {
             //register with tabs
-            var tabsVM = can.viewModel(this.element.parents('ma-tabs'));
+            const tabsVM = can.viewModel(this.element.parents('ma-tabs'));
             tabsVM.register(this.viewModel);
+        },
+        removed: () => {
+            const tabsVM = can.viewModel(this.element.parents('ma-tabs'));
+            tabsVM.unregister(this.viewModel);
         }
     }
 });

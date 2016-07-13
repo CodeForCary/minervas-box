@@ -1,19 +1,19 @@
 import can from 'can';
 import 'can/view/stache/stache';
 import template from './tabs.stache!';
-import viewmodel from './viewmodel';
+import ViewModel from './viewmodel';
 import './tabs.less!';
 
 import './tab/tab';
 
 can.Component.extend({
     tag: 'ma-tabs',
-    template: template,
-    scope: viewmodel,
+    template,
+    viewModel: ViewModel,
     events: {
-        inserted: function () {
-            //activate default tab
-            
+        inserted: () => {
+            //TODO: activate default tab
+
         }
     }
 });
