@@ -1,0 +1,11 @@
+{{#if flagSrc}}
+    <div class='city-flag city-flag-size-{{flag-size}} city-flag-position-{{flagPosition}}'>
+        <img
+            src="{{flagSrc}}"
+            class="city-flag-image"
+            {{#resizedDimensions}}
+            style="height: {{ht}}px; width:{{wt}}px"
+            {{/resizedDimensions}}
+        >
+    </div>
+{{/if}}
