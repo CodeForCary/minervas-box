@@ -5,6 +5,6 @@ import template from './ask-permission.stache!';
 
 can.Component.extend({
     tag: 'ma-ask-permission',
-    template: template,
+    template,
     viewModel: ViewModel
 });
