@@ -1,5 +1,3 @@
-import can from 'can';
-import 'can/map/define/define';
 import {Parent, Child} from 'utils/parentChildComponent.utils';
 
 export default Parent.extend({
@@ -14,13 +12,13 @@ export default Parent.extend({
             value: ''
         }
     },
-    openPrevious: function () {
+    openPrevious: () => {
         this.attr('activeItem', this.attr('previousSlide'));
     },
-    openNext: function () {
+    openNext: () => {
         this.attr('activeItem', this.attr('nextSlide'));
     },
-    goToThisSlide: function (ctx) {
+    goToThisSlide: ctx => {
         this.attr('activeItem', ctx);
     }
 });

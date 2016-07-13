@@ -6,15 +6,15 @@ import './slide-show-item.less!';
 
 export default can.Component.extend({
     tag: 'ma-slide-show-item',
-    template: template,
+    template,
     viewModel: ViewModel,
     events: {
-        inserted: function () {
-            var slideShowVM = can.viewModel(this.element.parents('ma-slide-show'));
+        inserted: () => {
+            const slideShowVM = can.viewModel(this.element.parents('ma-slide-show'));
             slideShowVM.register(this.viewModel);
         },
-        removed: function () {
-            var slideShowVM = can.viewModel(this.element.parents('ma-slide-show'));
+        removed: () => {
+            const slideShowVM = can.viewModel(this.element.parents('ma-slide-show'));
             slideShowVM.unregister(this.viewModel);
         }
     }

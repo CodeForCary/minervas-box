@@ -2,7 +2,7 @@
     {{! Indicators}}
     <ol class="carousel-indicators">
         {{#items}}
-        <li data-target="#{{slideId}}" can-click="goToThisSlide" class="{{#isActive}}active{{/isActive}}"></li>
+            <li data-target="#{{itemId}}" can-click="goToThisSlide" class="{{#isActive}}active{{/isActive}}"></li>
         {{/items}}
     </ol>
 
