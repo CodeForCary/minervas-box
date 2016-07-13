@@ -5,25 +5,25 @@ export default can.Map.extend({
     define: {
         showSearch: {
             value: false,
-            type:'boolean'
+            type: 'boolean'
         },
         params: {
             value: {
-                offset:0,
-                limit:3
+                offset: 0,
+                limit: 3
             }
         }
     },
-    toggleFilter: function (ctx, $el) {
-        var val = $el.text();
+    toggleFilter: (ctx, $el) => {
+        const val = $el.text();
 
         if (val === 'Near Me') {
-          //do geolocation
-          return;
+            //do geolocation
+            return;
         }
 
         if (val === 'Search') {
-          this.attr('showSearch', !this.attr('showSearch'));
+            this.attr('showSearch', !this.attr('showSearch'));
         }
     }
 });

@@ -6,6 +6,6 @@ import './city-details.less!';
 
 export default can.Component.extend({
     tag: 'ma-city-details',
-    template: template,
+    template,
     scope: viewmodel
 });

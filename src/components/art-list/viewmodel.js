@@ -8,14 +8,14 @@ export default can.Map.extend({
             value: []
         },
         defaultItem: {
-            get: function () {
-                var items = this.attr('artworks');
+            get: () => {
+                const items = this.attr('artworks');
                 return items && items.length ? items[0].attr('title') : '';
             }
         }
     },
-    Artwork: Artwork,
-    updateContext: function (hash) {
+    Artwork,
+    updateContext: hash => {
         can.route.attr(hash);
         return false;
     }

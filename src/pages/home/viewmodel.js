@@ -14,16 +14,16 @@ export default can.Map.extend({
             type: 'boolean'
         },
         askGeoPermission: {
-            get: function () {
-                var state = this.attr('state');
+            get: () => {
+                const state = this.attr('state');
                 return state.attr('toggles.useGeo') === false && this.attr('citySearch') === false;
             }
         }
     },
-    showMap: function () {
+    showMap: () => {
         this.attr('state.toggles.useGeo', true);
     },
-    showCitySearch: function () {
+    showCitySearch: () => {
         this.attr('state.toggles.useGeo', false);
         this.attr('citySearch', true);
     }

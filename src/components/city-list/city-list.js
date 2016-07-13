@@ -10,10 +10,10 @@ import 'components/flag-image/';
 
 can.Component.extend({
     tag: 'ma-city-list',
-    template: template,
+    template,
     scope: viewmodel,
     events: {
-        '{params} change': function (params, ev, key) {
+        '{params} change': (params, ev, key) => {
             if (key === 'city') {
                 params.attr('offset', 0);
             }

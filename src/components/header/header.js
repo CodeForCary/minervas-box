@@ -5,6 +5,6 @@ import viewmodel from './viewmodel';
 
 can.Component.extend({
     tag: 'ma-header',
-    template: template,
+    template,
     scope: viewmodel
 });

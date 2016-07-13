@@ -12,8 +12,8 @@ export default can.Map.extend({
             type: 'boolean'
         }
     },
-    Cities: Cities,
-    updateContext: function (hash) {
+    Cities,
+    updateContext: hash => {
         can.route.attr(hash);
         return false;
     }

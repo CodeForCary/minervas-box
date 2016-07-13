@@ -21,19 +21,19 @@ export default can.Map.extend({
             type: 'boolean'
         },
         askGeoPermission: {
-            get: function () {
-                var state = this.attr('state');
+            get: () => {
+                const state = this.attr('state');
                 return state.attr('toggles.useGeo') === false && this.attr('mapDisabled') === false;
             }
         }
     },
-    showMap: function () {
+    showMap: () => {
         this.attr('state.toggles.useGeo', true);
     },
-    showCitySearch: function () {
+    showCitySearch: () => {
         this.attr('state.toggles.useGeo', false);
         this.attr('mapDisabled', true);
     },
-    Artwork: Artwork,
-    City: City
+    Artwork,
+    City
 });

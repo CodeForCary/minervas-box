@@ -3,7 +3,7 @@ import 'can/map/define/define';
 
 export default can.Map.extend({
     define: {},
-    getPageUrl: function(pageName) {
-        return '#!' + pageName;
+    getPageUrl: pageName => {
+        return `#!${pageName}`;
     }
 });
