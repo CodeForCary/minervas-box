@@ -1,8 +1,8 @@
 import can from 'can';
 import 'can/view/stache/stache';
+import {inRangeArray} from 'utils/is-in-range';
 import template from './slide-show.stache!';
 import ViewModel from './viewmodel';
-import {inRangeArray} from 'utils/isInRange';
 
 export default can.Component.extend({
     tag: 'ma-slide-show',

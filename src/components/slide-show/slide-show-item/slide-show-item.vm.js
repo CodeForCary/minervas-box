@@ -1,4 +1,4 @@
-import {Child} from 'utils/parentChildComponent.utils';
+import {Child} from 'utils/parent-child-component';
 
 export default Child.extend({
     define: {}
