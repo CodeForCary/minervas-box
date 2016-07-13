@@ -1,31 +1,39 @@
+/* eslint babel/new-cap: 0 */
 import can from 'can';
 import 'can/map/define/define';
-import Storage from 'utils/localStorage';
+import Storage from 'utils/local-storage';
 
-var storage = Storage(),
-  dpipApiKey = '0f5a6c8d64f29d3eda22820a9b52acdbcc315647',
-  ipLocUrl = 'http://api.db-ip.com/addrinfo?&api_key='+dpipApiKey+'&addr=';
+const storage = new Storage();
+const dpipApiKey = '0f5a6c8d64f29d3eda22820a9b52acdbcc315647';
+const ipLocUrl = `http://api.db-ip.com/addrinfo?&api_key=${dpipApiKey}&addr=`;
 
 export default can.Model.extend({
-    findOne: function () {
+    findOne: () => {
         //TODO Use can.Model's makeFindOne?
-        var resp, ipDef, ipLocDef;
-        return can.Deferred(function(defer) {
+        let resp;
+        let ipDef;
+        let ipLocDef;
+        return can.Deferred(defer => {
             //check if location was previously resolved
-            if (!storage.key('ipLocation')) {
+            if (storage.key('ipLocation')) {
+                //get location data from storage
+                resp = storage.attr('ipLocation');
+                //done
+                defer.resolve(resp);
+            } else {
                 //get ip address
                 ipDef = can.ajax({
-                  url: 'http://tools.endgamestudio.com/clientip.php',
-                  type: 'GET'
+                    url: 'http://tools.endgamestudio.com/clientip.php',
+                    type: 'GET'
                 });
 
-                ipDef.then(function (ipData) {
+                ipDef.then(ipData => {
                     //get the IP address physical location
                     ipLocDef = can.ajax({
-                      url: ipLocUrl +ipData.ip,
-                      type: 'GET'
+                        url: ipLocUrl + ipData.ip,
+                        type: 'GET'
                     });
-                    ipLocDef.then(function (locData) {
+                    ipLocDef.then(locData => {
                         resp = ipData;
                         resp.location = locData;
 
@@ -35,13 +43,7 @@ export default can.Model.extend({
                         defer.resolve(resp);
                     });
                 });
-            } else {
-              //get location data from storage
-              resp = storage.attr('ipLocation');
-              //done
-              defer.resolve(resp);
             }
-
         });
     }
-},{});
+}, {});

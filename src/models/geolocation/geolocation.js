@@ -1,8 +1,11 @@
+/* global navigator */
+/* eslint babel/new-cap: 0, no-self-compare: 0 */
+
 import can from 'can';
 import 'can/map/define/define';
 
 const Coords = can.Map.extend({
-    init: function (opts) {
+    init: opts => {
         if (opts && !can.isEmptyObject(opts)) {
             this.attr('isEmpty', false);
         }
@@ -19,11 +22,11 @@ const Coords = can.Map.extend({
         altitudeAccuracy: {},
         heading: {},
         latitude: {
-            // Make sur it is a number and has a specific precision
-            type: function (val) {
-                var precision = 1000000;
+            // Make sure it is a number and has a specific precision
+            type: val => {
+                const precision = 1000000;
                 // Make sure its always a number
-                var resp = parseFloat(val);
+                let resp = parseFloat(val);
 
                 // Check if NaN
                 if (resp === resp) {
@@ -38,10 +41,10 @@ const Coords = can.Map.extend({
         },
         longitude: {
             // Make sur it is a number and has a specific precision
-            type: function (val) {
-                var precision = 1000000;
+            type: val => {
+                const precision = 1000000;
                 // Make sure its always a number
-                var resp = parseFloat(val);
+                let resp = parseFloat(val);
 
                 // Check if NaN
                 if (resp === resp) {
@@ -65,7 +68,7 @@ const Coords = can.Map.extend({
             type: 'number'
         },
         isWatch: {
-            get: function () {
+            get: () => {
                 return this.attr('watchId') > -1;
             }
         }
@@ -79,15 +82,15 @@ CoordsList.Map = Coords;
 export default can.Map.extend({
     define: {
         coords: {
-            get: function () {
-                var coordsList = this.attr('coordsList');
-                var len = coordsList.attr('length');
+            get: () => {
+                const coordsList = this.attr('coordsList');
+                const len = coordsList.attr('length');
                 return len > 0 ? coordsList.attr(len - 1) : {};
             },
-            set: function (coords) {
-                var coordsList = this.attr('coordsList');
-                var len = coordsList.attr('length');
-                if (len > 0){
+            set: coords => {
+                const coordsList = this.attr('coordsList');
+                const len = coordsList.attr('length');
+                if (len > 0) {
                     coordsList.splice(len - 1, 1, coords);
                 } else {
                     coordsList.push(coords);
@@ -101,48 +104,46 @@ export default can.Map.extend({
         },
         apiAvailable: {
             value: false,
-            get: function () {
-                return "geolocation" in navigator;
+            get: () => {
+                return 'geolocation' in navigator;
             }
         }
     },
-    getLocation: function () {
-        var self = this;
-        var def = can.Deferred();
+    getLocation: () => {
+        const self = this;
+        const def = can.Deferred();
 
         self.attr('coords', def);
 
-        navigator.geolocation.getCurrentPosition(function (loc) {
+        navigator.geolocation.getCurrentPosition(loc => {
             def.resolve(loc);
-        }, function (err) {
+        }, err => {
             def.reject(err);
         });
 
-        def.then(function (loc) {
+        def.then(loc => {
             loc.coords.timestamp = loc.timestamp;
             self.attr('coords', loc.coords);
         });
 
         return def;
-
     },
-    watchLocation: function () {
-        var self = this;
-        var def = can.Deferred();
+    watchLocation: () => {
+        const self = this;
+        const def = can.Deferred();
 
         self.attr('coords', def);
 
-        var watchId = navigator.geolocation.watchPosition(function (loc) {
+        const watchId = navigator.geolocation.watchPosition(loc => {
             def.resolve(loc);
-        }, function (err) {
+        }, err => {
             def.reject(err);
         });
 
-        def.then(function(position) {
-            loc.coords.timestamp = loc.timestamp;
-            self.attr('coords', loc.coords);
+        def.then(position => {
+            position.coords.timestamp = position.timestamp;
+            self.attr('coords', position.coords);
             self.attr('coords').attr('watchId', watchId);
         });
-
     }
 });
